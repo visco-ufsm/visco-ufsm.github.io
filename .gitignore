@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.vite/
+
+# Design references kept locally only: Discord screenshots of the group's review
+# rounds and captures of other people's sites. This repository is public.
+src/imports/*
+!src/imports/image-2.png
+!src/imports/image-7.png
+!src/imports/image-12.png
+
+*.local
+*.log
+
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,112 @@
+import { ALUMNI, FACULTY, STUDENTS, type Person } from "../data";
+import { Collapse, Reveal, SectionHead, Thumb } from "../components/primitives";
+
+function Portrait({ p, size }: { p: Person; size: number }) {
+  return (
+    <a
+      href={p.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group block shrink-0 rounded-full"
+      style={{ width: size, height: size }}
+      tabIndex={-1}
+      aria-hidden="true"
+    >
+      <span
+        className="block h-full w-full overflow-hidden rounded-full bg-rule ring-1 ring-rule transition-all duration-300 group-hover:ring-2 group-hover:ring-iris"
+        style={{ boxShadow: "0 0 0 4px var(--color-paper)" }}
+      >
+        <Thumb
+          src={p.photo}
+          className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
+        />
+      </span>
+    </a>
+  );
+}
+
+function FacultyCard({ p }: { p: Person }) {
+  return (
+    <div className="flex items-center gap-5 border-b border-rule py-7 sm:border-b-0 sm:py-0">
+      <Portrait p={p} size={92} />
+      <div className="min-w-0">
+        <a
+          href={p.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="dsp ulink text-[1.0625rem]"
+        >
+          {p.name}
+        </a>
+        <p className="mono mt-2 text-faint">{p.role}</p>
+        <p className="mt-1 text-[0.875rem] text-mute">{p.area}</p>
+      </div>
+    </div>
+  );
+}
+
+function StudentCard({ p }: { p: Person }) {
+  return (
+    <div className="flex flex-col items-center gap-3 text-center">
+      <Portrait p={p} size={78} />
+      <div>
+        <a
+          href={p.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ulink text-[0.875rem] font-medium leading-snug"
+        >
+          {p.name}
+        </a>
+        <p className="mono mt-1.5 text-[0.625rem] text-faint">{p.role}</p>
+        <p className="mt-1 text-[0.8125rem] leading-snug text-mute">{p.area}</p>
+      </div>
+    </div>
+  );
+}
+
+export default function People() {
+  return (
+    <section id="people" className="band shell border-b border-rule">
+      <SectionHead
+        eyebrow="People"
+        title="Meet the team"
+        intro="Names link to each person's Lattes or GitHub profile."
+      />
+
+      <Collapse label="Faculty" count={FACULTY.length}>
+        <div className="grid gap-x-10 gap-y-8 sm:grid-cols-2 xl:grid-cols-3">
+          {FACULTY.map((p) => (
+            <Reveal key={p.name}>
+              <FacultyCard p={p} />
+            </Reveal>
+          ))}
+        </div>
+      </Collapse>
+
+      <Collapse label="Current students" count={STUDENTS.length}>
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+          {STUDENTS.map((p, i) => (
+            <Reveal key={p.name} delay={i * 45}>
+              <StudentCard p={p} />
+            </Reveal>
+          ))}
+        </div>
+      </Collapse>
+
+      <Collapse label="Alumni" count={ALUMNI.length} defaultOpen={false}>
+        <ul className="grid gap-x-10 sm:grid-cols-2 lg:grid-cols-3">
+          {ALUMNI.map((a) => (
+            <li
+              key={a.name}
+              className="flex items-baseline justify-between gap-4 border-b border-rule py-3.5"
+            >
+              <span className="text-[0.9375rem]">{a.name}</span>
+              <span className="num text-[0.7rem] text-faint">{a.degree}</span>
+            </li>
+          ))}
+        </ul>
+      </Collapse>
+    </section>
+  );
+}
