@@ -94,7 +94,6 @@ export default function Publications({
   return (
     <section id="publications" className="band shell border-b border-rule">
       <SectionHead
-        eyebrow="Publications"
         title="Papers by year"
         right={
           <label className="flex items-center gap-2.5 border-b border-rule pb-2 sm:w-64">

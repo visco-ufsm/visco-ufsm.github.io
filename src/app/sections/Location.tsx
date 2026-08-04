@@ -1,15 +1,15 @@
 import { ArrowUpRight } from "lucide-react";
-import Graticule from "../components/Graticule";
 import { GROUP, PLACE } from "../data";
 import { Reveal, SectionHead } from "../components/primitives";
 
 export default function Location() {
   return (
     <section id="location" className="band shell border-b border-rule">
-      <SectionHead eyebrow="Location" title="Where we are" />
+      <SectionHead title="Where we are" />
 
-      <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-        <Reveal className="lg:col-span-5">
+      {/* Both columns stretch, so the map ends level with the text beside it. */}
+      <div className="grid items-stretch gap-12 lg:grid-cols-12 lg:gap-16">
+        <Reveal className="flex h-full flex-col lg:col-span-5">
           <address className="not-italic">
             <p className="text-[1.0625rem] leading-relaxed text-ink">
               {PLACE.lines.map((l) => (
@@ -56,16 +56,16 @@ export default function Location() {
           </p>
         </Reveal>
 
-        <Reveal delay={80} className="lg:col-span-7">
-          <figure className="border border-rule bg-white">
-            <div className="relative aspect-[16/11] w-full overflow-hidden">
-              <Graticule variant="map" className="absolute inset-0 h-full w-full" />
-              <span className="num absolute bottom-3 left-3 text-[0.65rem] text-faint">
-                rings: 1 km · 2 km
-              </span>
-              <span className="num absolute right-3 top-3 text-[0.65rem] text-faint">
-                {PLACE.latLabel} {PLACE.lonLabel}
-              </span>
+        <Reveal delay={80} className="h-full lg:col-span-7">
+          <figure className="flex h-full flex-col border border-rule bg-white">
+            <div className="relative min-h-[20rem] flex-1">
+              <iframe
+                title="VisCo on the map: Centro de Tecnologia, UFSM Camobi campus"
+                src={PLACE.embed}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0 h-full w-full border-0"
+              />
             </div>
             <figcaption className="flex flex-col items-start gap-2 border-t border-rule px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
               <span className="mono text-faint">

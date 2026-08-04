@@ -44,7 +44,6 @@ export default function Research({
   return (
     <section id="research" className="band shell border-b border-rule">
       <SectionHead
-        eyebrow="Research"
         title="Research lines"
         intro="Lines with published work link to the corresponding papers."
       />

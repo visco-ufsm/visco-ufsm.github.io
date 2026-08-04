@@ -28,7 +28,6 @@ export const GROUP = {
   short: "UFSM",
   email: "thiago.silveira@ufsm.br",
   github: "https://github.com/visco-ufsm",
-  affiliations: ["SBC", "SBMAC", "IEEE", "PRPGP/UFSM"],
 };
 
 /* Campus coordinates: the datum the hero graticule and the map both plot. */
@@ -44,6 +43,8 @@ export const PLACE = {
     "Santa Maria – RS, 97105-900, Brasil",
   ],
   maps: "https://www.google.com/maps/search/?api=1&query=-29.71472,-53.71722",
+  embed:
+    "https://www.google.com/maps?q=-29.71472,-53.71722&z=16&hl=pt-BR&output=embed",
 };
 
 /* ── Research lines ──────────────────────────────────────────

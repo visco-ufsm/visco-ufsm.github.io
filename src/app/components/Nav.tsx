@@ -33,8 +33,7 @@ export default function Nav({
             className="h-6 w-6 rounded-full"
             style={{ mixBlendMode: "multiply" }}
           />
-          <span className="dsp text-[0.95rem] leading-none">VisCo</span>
-          <span className="mono hidden text-[0.6rem] text-faint sm:inline">UFSM</span>
+          <span className="dsp text-[1.0625rem] leading-none">VisCo</span>
         </button>
 
         <ul className="hidden items-center gap-7 md:flex">

@@ -1,17 +1,10 @@
 import { useEffect, useRef } from "react";
 import { PLACE } from "../data";
 
-/* The signature element.
- *
- * "sphere": the graticule of a tilted, slowly turning sphere drawn in
- * equirectangular projection, the exact transform VisCo's work is about.
- * Parallels bow, meridians crowd toward the poles, and the campus sits on it
- * as a real datum.
- *
- * "map": the same coordinate system zoomed to the campus, used as the map in
- * the Location section. One idea, two jobs. */
-
-type Variant = "sphere" | "map";
+/* The signature element: the graticule of a tilted, slowly turning sphere drawn
+ * in equirectangular projection, the exact transform VisCo's work is about.
+ * Parallels bow, meridians crowd toward the poles, and the campus sits on it as
+ * a real datum. */
 
 const RULE = "rgba(11, 14, 20, 0.17)";
 const RULE_SOFT = "rgba(11, 14, 20, 0.09)";
@@ -130,71 +123,7 @@ function drawSphere(
   ctx.fill();
 }
 
-function drawMap(ctx: CanvasRenderingContext2D, w: number, h: number) {
-  ctx.clearRect(0, 0, w, h);
-  const cx = w / 2;
-  const cy = h / 2;
-  const span = 0.06; // degrees of latitude across the shorter axis
-  const pxPerDeg = h / span;
-  const kmPerDegLat = 111.32;
-
-  ctx.lineWidth = 1;
-  ctx.strokeStyle = RULE_SOFT;
-  const step = 0.01;
-  for (let d = -0.1; d <= 0.1 + 1e-9; d += step) {
-    const y = cy + d * pxPerDeg;
-    if (y > 0 && y < h) {
-      ctx.beginPath();
-      ctx.moveTo(0, y);
-      ctx.lineTo(w, y);
-      ctx.stroke();
-    }
-    const x = cx + d * pxPerDeg * Math.cos(PLACE.lat * D2R);
-    if (x > 0 && x < w) {
-      ctx.beginPath();
-      ctx.moveTo(x, 0);
-      ctx.lineTo(x, h);
-      ctx.stroke();
-    }
-  }
-
-  // Distance rings, honest scale.
-  ctx.setLineDash([2, 4]);
-  ctx.strokeStyle = RULE;
-  for (const km of [1, 2]) {
-    ctx.beginPath();
-    ctx.arc(cx, cy, (km / kmPerDegLat) * pxPerDeg, 0, Math.PI * 2);
-    ctx.stroke();
-  }
-  ctx.setLineDash([]);
-
-  // Crosshair through the campus, lit.
-  ctx.strokeStyle = spectrum(ctx, w);
-  ctx.lineWidth = 1.4;
-  ctx.beginPath();
-  ctx.moveTo(0, cy);
-  ctx.lineTo(w, cy);
-  ctx.moveTo(cx, 0);
-  ctx.lineTo(cx, h);
-  ctx.stroke();
-
-  ctx.beginPath();
-  ctx.arc(cx, cy, 16, 0, Math.PI * 2);
-  ctx.fillStyle = "rgba(91, 75, 214, 0.10)";
-  ctx.fill();
-  ctx.beginPath();
-  ctx.arc(cx, cy, 4, 0, Math.PI * 2);
-  ctx.fillStyle = IRIS;
-  ctx.fill();
-}
-
-export default function Graticule({
-  variant = "sphere",
-  className = "",
-}: {
-  variant?: Variant;
-  className?: string;
-}) {
+export default function Graticule({ className = "" }: { className?: string }) {
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -223,8 +152,7 @@ export default function Graticule({
 
     const paint = () => {
       if (w === 0 || h === 0) return;
-      if (variant === "map") drawMap(ctx, w, h);
-      else drawSphere(ctx, w, h, yaw);
+      drawSphere(ctx, w, h, yaw);
     };
 
     const frame = (now: number) => {
@@ -254,14 +182,14 @@ export default function Graticule({
     );
     io.observe(canvas);
 
-    if (variant === "sphere" && !still) raf = requestAnimationFrame(frame);
+    if (!still) raf = requestAnimationFrame(frame);
 
     return () => {
       cancelAnimationFrame(raf);
       ro.disconnect();
       io.disconnect();
     };
-  }, [variant]);
+  }, []);
 
   return <canvas ref={ref} aria-hidden="true" className={className} />;
 }

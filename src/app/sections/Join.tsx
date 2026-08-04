@@ -24,7 +24,7 @@ const COLUMNS = [
 export default function Join() {
   return (
     <section id="join" className="band shell">
-      <SectionHead eyebrow="Join" title="How to join" />
+      <SectionHead title="How to join" />
 
       <div className="grid gap-x-16 gap-y-12 md:grid-cols-2">
         {COLUMNS.map((c, i) => (

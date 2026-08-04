@@ -87,13 +87,13 @@ export function Tag({ type }: { type: NewsTag | PubType }) {
   );
 }
 
+/* No eyebrow label: the section name is already in the menu, and repeating it
+   in the running text only adds noise. */
 export function SectionHead({
-  eyebrow,
   title,
   intro,
   right,
 }: {
-  eyebrow: string;
   title: string;
   intro?: string;
   right?: ReactNode;
@@ -102,10 +102,7 @@ export function SectionHead({
     <header className="mb-10">
       <div className="spectrum-bar mb-6 h-px w-12" />
       <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <p className="mono text-faint">{eyebrow}</p>
-          <h2 className="dsp mt-3 text-[clamp(1.75rem,3.2vw,2.6rem)]">{title}</h2>
-        </div>
+        <h2 className="dsp text-[clamp(1.6rem,3vw,2.35rem)]">{title}</h2>
         {right}
       </div>
       {intro && (

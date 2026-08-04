@@ -69,7 +69,6 @@ export default function People() {
   return (
     <section id="people" className="band shell border-b border-rule">
       <SectionHead
-        eyebrow="People"
         title="Meet the team"
         intro="Names link to each person's Lattes or GitHub profile."
       />
