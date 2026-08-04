@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Search, X } from "lucide-react";
 import { LINES, LINE_TITLE, PUBS, type LineId, type Pub, type PubType } from "../data";
-import { Collapse, SectionHead, Tag } from "../components/primitives";
+import { SectionHead, Tag } from "../components/primitives";
 
 const TYPES = ["All", "Journal", "Conference"] as const;
 
@@ -64,8 +64,6 @@ export default function Publications({
   }, [query, type, line]);
 
   const years = [...new Set(filtered.map((p) => p.year))].sort((a, b) => b - a);
-  const recent = years.filter((y) => y >= 2024);
-  const earlier = years.filter((y) => y < 2024);
   const dirty = query !== "" || type !== "All" || line !== null;
 
   const clear = () => {
@@ -73,23 +71,6 @@ export default function Publications({
     setType("All");
     setLine(null);
   };
-
-  const List = ({ list }: { list: number[] }) => (
-    <>
-      {list.map((year) => (
-        <div key={year} className="grid gap-2 md:grid-cols-[6rem_1fr] md:gap-8">
-          <p className="num pt-5 text-[0.8125rem] text-faint">{year}</p>
-          <div>
-            {filtered
-              .filter((p) => p.year === year)
-              .map((p) => (
-                <Entry key={p.title} p={p} />
-              ))}
-          </div>
-        </div>
-      ))}
-    </>
-  );
 
   return (
     <section id="publications" className="band shell border-b border-rule">
@@ -166,27 +147,29 @@ export default function Publications({
           </button>
         </p>
       ) : (
-        <div className="mt-10">
-          <Collapse
-            label="2024 and later"
-            count={filtered.filter((p) => p.year >= 2024).length}
-          >
-            {recent.length ? (
-              <List list={recent} />
-            ) : (
-              <p className="text-[0.9375rem] text-mute">No matches in this period.</p>
-            )}
-          </Collapse>
-
-          {earlier.length > 0 && (
-            <Collapse
-              label="Earlier"
-              count={filtered.filter((p) => p.year < 2024).length}
-              defaultOpen={false}
-            >
-              <List list={earlier} />
-            </Collapse>
-          )}
+        /* One block per year that actually has papers, all of them open. */
+        <div className="mt-8">
+          {years.map((year) => {
+            const inYear = filtered.filter((p) => p.year === year);
+            return (
+              <div
+                key={year}
+                className="grid gap-2 border-t border-rule pt-6 first:border-t-0 md:grid-cols-[7rem_1fr] md:gap-8"
+              >
+                <div className="md:sticky md:top-20 md:self-start">
+                  <p className="num text-[1.25rem] leading-none text-ink">{year}</p>
+                  <p className="mono mt-2 text-faint">
+                    {inYear.length} {inYear.length === 1 ? "paper" : "papers"}
+                  </p>
+                </div>
+                <div>
+                  {inYear.map((p) => (
+                    <Entry key={p.title} p={p} />
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       )}
     </section>
