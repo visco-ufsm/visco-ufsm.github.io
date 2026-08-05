@@ -43,10 +43,10 @@ export const PLACE = {
   latLabel: "29°42′46.3″S",
   lonLabel: "53°43′01.6″W",
   lines: [
-    "Departamento de Computação Aplicada",
-    "Centro de Tecnologia (CT)",
-    "Av. Roraima 1000, Camobi",
-    "Santa Maria – RS, 97105-900, Brasil",
+    "Department of Applied Computing",
+    "Technology Center (CT)",
+    "Ave. Roraima 1000, Camobi",
+    "Santa Maria – RS, 97105-900, Brazil",
   ],
 };
 
@@ -94,7 +94,7 @@ export const ABOUT = {
   paragraphs: [
     "VisCo develops computational methods for signal processing, visual computing, and artificial intelligence, advancing the foundations of intelligent visual systems.",
     "Our research spans signal, image, and video processing, computer vision, computational imaging, efficient visual representation, and machine learning, with an emphasis on efficient and reliable algorithms.",
-    "We contribute to the advancement of visual computing through interdisciplinary research, scientific collaboration, and open science.",
+    "Based at the Technology Center of the Federal University of Santa Maria (UFSM), VisCo brings together faculty members, students, and collaborators to conduct interdisciplinary research, foster scientific collaboration, and contribute to the advancement of visual computing.",
   ],
   newsTitle: "Recent",
 };
