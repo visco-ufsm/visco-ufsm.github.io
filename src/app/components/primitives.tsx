@@ -99,14 +99,13 @@ export function SectionHead({
   right?: ReactNode;
 }) {
   return (
-    <header className="mb-10">
-      <div className="spectrum-bar mb-6 h-px w-12" />
+    <header className="mb-7">
       <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
         <h2 className="dsp text-[clamp(1.6rem,3vw,2.35rem)]">{title}</h2>
         {right}
       </div>
       {intro && (
-        <p className="mt-5 max-w-[64ch] text-[0.95rem] leading-relaxed text-mute">
+        <p className="mt-4 max-w-[64ch] text-[0.95rem] leading-relaxed text-mute">
           {intro}
         </p>
       )}
@@ -128,7 +127,7 @@ export function Collapse({
 }) {
   const [open, setOpen] = useState(defaultOpen);
   return (
-    <section className="mt-12 first:mt-0">
+    <section className="mt-9 first:mt-0">
       <button
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
@@ -147,7 +146,7 @@ export function Collapse({
           />
         </span>
       </button>
-      {open && <div className="pt-6">{children}</div>}
+      {open && <div className="pt-5">{children}</div>}
     </section>
   );
 }

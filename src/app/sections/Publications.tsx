@@ -1,6 +1,14 @@
 import { useMemo, useState } from "react";
 import { Search, X } from "lucide-react";
-import { LINES, LINE_TITLE, PUBS, type LineId, type Pub, type PubType } from "../data";
+import {
+  LINES,
+  LINE_TITLE,
+  PUBLICATIONS_TEXT,
+  PUBS,
+  type LineId,
+  type Pub,
+  type PubType,
+} from "../data";
 import { SectionHead, Tag } from "../components/primitives";
 
 const TYPES = ["All", "Journal", "Conference"] as const;
@@ -75,14 +83,14 @@ export default function Publications({
   return (
     <section id="publications" className="band shell border-b border-rule">
       <SectionHead
-        title="Papers by year"
+        title={PUBLICATIONS_TEXT.title}
         right={
           <label className="flex items-center gap-2.5 border-b border-rule pb-2 sm:w-64">
             <Search size={14} className="shrink-0 text-faint" />
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search title, venue, author"
+              placeholder={PUBLICATIONS_TEXT.searchPlaceholder}
               className="w-full bg-transparent text-[0.875rem] text-ink placeholder:text-faint focus:outline-none"
             />
           </label>

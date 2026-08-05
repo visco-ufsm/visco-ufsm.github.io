@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { ArrowDown } from "lucide-react";
 import PointCloud from "../components/PointCloud";
-import { FACULTY, GROUP, LINES, PUBS, STUDENTS, type Section } from "../data";
+import { FACULTY, GROUP, HERO, LINES, PUBS, STUDENTS, type Section } from "../data";
 
 /* The lens flare of the group's banner, redrawn in CSS so it carries no
  * competing wordmark and stays sharp at any size. */
@@ -65,7 +65,7 @@ export default function Hero({ go }: { go: (s: Section) => void }) {
     <section id="home" className="relative overflow-hidden border-b border-rule">
       <Glass />
 
-      {/* The sphere, unwrapped. Fades out under the headline. */}
+      {/* Sampled surface. Fades out under the headline. */}
       <div
         className="pointer-events-none absolute inset-y-0 right-0 z-0 w-full md:w-[62%]"
         style={{
@@ -78,7 +78,7 @@ export default function Hero({ go }: { go: (s: Section) => void }) {
         <PointCloud className="absolute inset-0 h-full w-full opacity-55 md:opacity-100" />
       </div>
 
-      <div className="shell relative z-10 flex min-h-[min(82vh,860px)] flex-col justify-center pb-10 pt-28">
+      <div className="shell relative z-10 flex min-h-[min(70vh,660px)] flex-col justify-center pb-10 pt-28">
         <div className="max-w-[46rem]">
           <p className="mono rise text-mute">
             {GROUP.name} · {GROUP.institution}
@@ -88,17 +88,19 @@ export default function Hero({ go }: { go: (s: Section) => void }) {
             className="dsp dsp-xl rise mt-7 text-[clamp(2.2rem,5.6vw,4.4rem)]"
             style={{ animationDelay: "90ms" }}
           >
-            Visual Computing
-            <br />
-            Research Group
+            {HERO.headline.map((line, i) => (
+              <span key={line}>
+                {i > 0 && <br />}
+                {line}
+              </span>
+            ))}
           </h1>
 
           <p
             className="rise mt-8 max-w-[52ch] text-[1.125rem] leading-relaxed text-mute"
             style={{ animationDelay: "180ms" }}
           >
-            Research on compression, computer vision and data mining for
-            omnidirectional visual content: 360° video and spherical imagery.
+            {HERO.lead}
           </p>
 
           <div
@@ -109,14 +111,14 @@ export default function Hero({ go }: { go: (s: Section) => void }) {
               onClick={() => go("research")}
               className="mono inline-flex items-center gap-2.5 rounded-[3px] bg-ink px-5 py-3 text-paper transition-opacity hover:opacity-85"
             >
-              See the research
+              {HERO.primaryAction}
               <ArrowDown size={13} />
             </button>
             <button
               onClick={() => go("join")}
               className="mono ulink text-mute transition-colors hover:text-ink"
             >
-              Join the group
+              {HERO.secondaryAction}
             </button>
           </div>
         </div>

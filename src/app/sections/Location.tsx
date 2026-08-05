@@ -1,11 +1,11 @@
 import { ArrowUpRight } from "lucide-react";
-import { GROUP, PLACE } from "../data";
+import { GROUP, LOCATION_TEXT, MAPS_EMBED, MAPS_LINK, PLACE } from "../data";
 import { Reveal, SectionHead } from "../components/primitives";
 
 export default function Location() {
   return (
     <section id="location" className="band shell border-b border-rule">
-      <SectionHead title="Where we are" />
+      <SectionHead title={LOCATION_TEXT.title} />
 
       {/* Both columns stretch, so the map ends level with the text beside it. */}
       <div className="grid items-stretch gap-12 lg:grid-cols-12 lg:gap-16">
@@ -51,8 +51,7 @@ export default function Location() {
           </dl>
 
           <p className="mt-8 max-w-[46ch] text-[0.9375rem] leading-relaxed text-mute">
-            To visit, send an email in advance so someone can meet you at the building
-            entrance.
+            {LOCATION_TEXT.note}
           </p>
         </Reveal>
 
@@ -61,18 +60,16 @@ export default function Location() {
             <div className="relative min-h-[20rem] flex-1">
               <iframe
                 title="VisCo on the map: Centro de Tecnologia, UFSM Camobi campus"
-                src={PLACE.embed}
+                src={MAPS_EMBED}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="absolute inset-0 h-full w-full border-0"
               />
             </div>
             <figcaption className="flex flex-col items-start gap-2 border-t border-rule px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
-              <span className="mono text-faint">
-                Centro de Tecnologia · Campus Camobi
-              </span>
+              <span className="mono text-faint">{LOCATION_TEXT.caption}</span>
               <a
-                href={PLACE.maps}
+                href={MAPS_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mono ulink text-ink"

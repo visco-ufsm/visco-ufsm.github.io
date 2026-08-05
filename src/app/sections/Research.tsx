@@ -1,5 +1,12 @@
 import { ArrowUpRight } from "lucide-react";
-import { LINES, PROJECTS, pubsInLine, type LineId, type Project } from "../data";
+import {
+  LINES,
+  PROJECTS,
+  RESEARCH,
+  pubsInLine,
+  type LineId,
+  type Project,
+} from "../data";
 import { Collapse, Reveal, SectionHead } from "../components/primitives";
 
 function ProjectRow({ p }: { p: Project }) {
@@ -44,8 +51,8 @@ export default function Research({
   return (
     <section id="research" className="band shell border-b border-rule">
       <SectionHead
-        title="Research lines"
-        intro="Lines with published work link to the corresponding papers."
+        title={RESEARCH.title}
+        intro={RESEARCH.intro}
       />
 
       <div className="border-t border-rule">
@@ -91,8 +98,8 @@ export default function Research({
         })}
       </div>
 
-      <div className="mt-16">
-        <Collapse label="Active projects" count={active.length}>
+      <div className="mt-12">
+        <Collapse label={RESEARCH.activeLabel} count={active.length}>
           <div className="border-t border-rule">
             {active.map((p) => (
               <ProjectRow key={p.title} p={p} />
@@ -101,7 +108,7 @@ export default function Research({
         </Collapse>
 
         {done.length > 0 && (
-          <Collapse label="Concluded projects" count={done.length} defaultOpen={false}>
+          <Collapse label={RESEARCH.concludedLabel} count={done.length} defaultOpen={false}>
             <div className="border-t border-rule">
               {done.map((p) => (
                 <ProjectRow key={p.title} p={p} />

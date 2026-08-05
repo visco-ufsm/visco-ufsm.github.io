@@ -1,4 +1,4 @@
-import { ALUMNI, FACULTY, STUDENTS, type Person } from "../data";
+import { ALUMNI, FACULTY, PEOPLE_TEXT, STUDENTS, type Person } from "../data";
 import { Collapse, Reveal, SectionHead, Thumb } from "../components/primitives";
 
 function Portrait({ p, size }: { p: Person; size: number }) {
@@ -69,11 +69,11 @@ export default function People() {
   return (
     <section id="people" className="band shell border-b border-rule">
       <SectionHead
-        title="Meet the team"
-        intro="Names link to each person's Lattes or GitHub profile."
+        title={PEOPLE_TEXT.title}
+        intro={PEOPLE_TEXT.intro}
       />
 
-      <Collapse label="Faculty" count={FACULTY.length}>
+      <Collapse label={PEOPLE_TEXT.facultyLabel} count={FACULTY.length}>
         <div className="grid gap-x-10 gap-y-8 sm:grid-cols-2 xl:grid-cols-3">
           {FACULTY.map((p) => (
             <Reveal key={p.name}>
@@ -83,7 +83,7 @@ export default function People() {
         </div>
       </Collapse>
 
-      <Collapse label="Current students" count={STUDENTS.length}>
+      <Collapse label={PEOPLE_TEXT.studentsLabel} count={STUDENTS.length}>
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
           {STUDENTS.map((p, i) => (
             <Reveal key={p.name} delay={i * 45}>
@@ -93,7 +93,7 @@ export default function People() {
         </div>
       </Collapse>
 
-      <Collapse label="Alumni" count={ALUMNI.length} defaultOpen={false}>
+      <Collapse label={PEOPLE_TEXT.alumniLabel} count={ALUMNI.length} defaultOpen={false}>
         <ul className="grid gap-x-10 sm:grid-cols-2 lg:grid-cols-3">
           {ALUMNI.map((a) => (
             <li

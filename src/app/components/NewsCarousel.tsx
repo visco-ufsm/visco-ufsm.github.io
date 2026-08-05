@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
-import { NEWS } from "../data";
+import { ABOUT, NEWS } from "../data";
 import { Tag, Thumb } from "./primitives";
 
 const INTERVAL = 6000;
@@ -56,7 +56,7 @@ export default function NewsCarousel() {
       onBlurCapture={() => setPaused(false)}
     >
       <div className="mb-4 flex items-center justify-between gap-4 border-b border-rule pb-3">
-        <h3 className="mono text-ink">Recent</h3>
+        <h3 className="mono text-ink">{ABOUT.newsTitle}</h3>
         <div className="flex items-center gap-3">
           <button
             onClick={() => go(-1)}
