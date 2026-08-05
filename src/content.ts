@@ -93,8 +93,8 @@ export const ABOUT = {
   // O primeiro parágrafo aparece maior que os demais.
   paragraphs: [
     "The Visual Computing Research Group (VisCo) develops efficient computational methods for signal processing, visual computing, and artificial intelligence.",
-    "Our research focuses on representing, compressing, processing, and understanding visual information, combining mathematical foundations with modern artificial intelligence.",
-    "Founded in 2025, VisCo is based at the Technology Center (CT) of the Federal University of Santa Maria (UFSM), Brazil, bringing together faculty members, undergraduate and graduate students, and collaborators from UFSM and partner institutions to conduct interdisciplinary research and foster scientific collaboration."
+    "Our research focuses on representing, processing, compressing, and understanding visual information, combining mathematical foundations with modern artificial intelligence.",
+    "Founded in 2025, VisCo is based at the Technology Center (CT) of the Federal University of Santa Maria (UFSM), Brazil. The group brings together faculty members, undergraduate and graduate students, and collaborators from UFSM and partner institutions to conduct interdisciplinary research and foster scientific collaboration."
   ],
   newsTitle: "Recent",
 };
