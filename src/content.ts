@@ -23,7 +23,7 @@
 export const GROUP = {
   name: "VisCo",
   full: "Visual Computing Research Group",
-  institution: "Universidade Federal de Santa Maria",
+  institution: "Federal University of Santa Maria",
   short: "UFSM",
   email: "thiago.silveira@ufsm.br",
   github: "https://github.com/visco-ufsm",
@@ -81,9 +81,9 @@ export const LABELS: Record<Section, string> = {
 export const HERO = {
   // Cada item é uma linha do título. Duas linhas funcionam melhor.
   headline: ["Visual Computing", "Research Group"],
-  lead: "Research on compression, computer vision and data mining for omnidirectional visual content: 360° video and spherical imagery.",
-  primaryAction: "See the research",
-  secondaryAction: "Join the group",
+  lead: "Research on signal processing, visual computing, and artificial intelligence.",
+  primaryAction: "Explore Research",
+  secondaryAction: "Join VisCo",
 };
 
 /* ── Quem somos ──────────────────────────────────────────────────────────── */
