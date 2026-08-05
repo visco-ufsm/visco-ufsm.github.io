@@ -81,7 +81,7 @@ export const LABELS: Record<Section, string> = {
 export const HERO = {
   // Cada item é uma linha do título. Duas linhas funcionam melhor.
   headline: ["Visual Computing", "Research Group"],
-  lead: "Research on signal processing, visual computing, and artificial intelligence.",
+  lead: "Advancing computational methods for signal processing, visual computing, and artificial intelligence.",
   primaryAction: "Explore Research",
   secondaryAction: "Join VisCo",
 };
