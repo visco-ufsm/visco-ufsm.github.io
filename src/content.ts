@@ -89,12 +89,12 @@ export const HERO = {
 /* ── Quem somos ──────────────────────────────────────────────────────────── */
 
 export const ABOUT = {
-  title: "Who we are",
+  title: "About VisCo",
   // O primeiro parágrafo aparece maior que os demais.
   paragraphs: [
-    "The group covers the full pipeline of omnidirectional visual content: coding and transmission of 360° video, recognition and segmentation on spherical imagery, and quality assessment of panoramic content.",
-    "The group publishes in journals and conferences, releases code where possible, and supervises students from undergraduate research through the M.Sc. and Ph.D.",
-    "VisCo works at the Departamento de Computação Aplicada, is registered with PRPGP/UFSM, and is affiliated with SBC, SBMAC and IEEE.",
+    "VisCo develops computational methods for signal processing, visual computing, and artificial intelligence, advancing the foundations of intelligent visual systems.",
+    "Our research spans signal, image, and video processing, computer vision, computational imaging, efficient visual representation, and machine learning, with an emphasis on efficient and reliable algorithms.",
+    "We contribute to the advancement of visual computing through interdisciplinary research, scientific collaboration, and open science.",
   ],
   newsTitle: "Recent",
 };
