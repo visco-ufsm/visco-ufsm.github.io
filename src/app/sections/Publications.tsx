@@ -3,13 +3,14 @@ import { Search, X } from "lucide-react";
 import {
   LINES,
   LINE_TITLE,
+  OLDER_AFTER,
   PUBLICATIONS_TEXT,
   PUBS,
   type LineId,
   type Pub,
   type PubType,
 } from "../data";
-import { SectionHead, Tag } from "../components/primitives";
+import { Collapse, SectionHead, Tag } from "../components/primitives";
 
 const TYPES = ["All", "Journal", "Conference"] as const;
 
@@ -74,11 +75,45 @@ export default function Publications({
   const years = [...new Set(filtered.map((p) => p.year))].sort((a, b) => b - a);
   const dirty = query !== "" || type !== "All" || line !== null;
 
+  /* Anything past OLDER_AFTER years drops out of the main list into a fold that
+     starts closed, so the list stays short as the group publishes more. */
+  const cutoff = new Date().getFullYear() - OLDER_AFTER;
+  const recentYears = years.filter((y) => y >= cutoff);
+  const olderYears = years.filter((y) => y < cutoff);
+  const olderCount = filtered.filter((p) => p.year < cutoff).length;
+
   const clear = () => {
     setQuery("");
     setType("All");
     setLine(null);
   };
+
+  /* One block per year, each with its own count. */
+  const YearGroups = ({ list }: { list: number[] }) => (
+    <>
+      {list.map((year) => {
+        const inYear = filtered.filter((p) => p.year === year);
+        return (
+          <div
+            key={year}
+            className="grid gap-2 border-t border-rule pt-6 first:border-t-0 md:grid-cols-[7rem_1fr] md:gap-8"
+          >
+            <div className="md:sticky md:top-20 md:self-start">
+              <p className="num text-[1.25rem] leading-none text-ink">{year}</p>
+              <p className="mono mt-2 text-faint">
+                {inYear.length} {inYear.length === 1 ? "paper" : "papers"}
+              </p>
+            </div>
+            <div>
+              {inYear.map((p) => (
+                <Entry key={p.title} p={p} />
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </>
+  );
 
   return (
     <section id="publications" className="band shell border-b border-rule">
@@ -155,29 +190,20 @@ export default function Publications({
           </button>
         </p>
       ) : (
-        /* One block per year that actually has papers, all of them open. */
         <div className="mt-8">
-          {years.map((year) => {
-            const inYear = filtered.filter((p) => p.year === year);
-            return (
-              <div
-                key={year}
-                className="grid gap-2 border-t border-rule pt-6 first:border-t-0 md:grid-cols-[7rem_1fr] md:gap-8"
+          <YearGroups list={recentYears} />
+
+          {olderYears.length > 0 && (
+            <div className={recentYears.length > 0 ? "mt-10" : undefined}>
+              <Collapse
+                label={PUBLICATIONS_TEXT.olderLabel}
+                count={olderCount}
+                defaultOpen={false}
               >
-                <div className="md:sticky md:top-20 md:self-start">
-                  <p className="num text-[1.25rem] leading-none text-ink">{year}</p>
-                  <p className="mono mt-2 text-faint">
-                    {inYear.length} {inYear.length === 1 ? "paper" : "papers"}
-                  </p>
-                </div>
-                <div>
-                  {inYear.map((p) => (
-                    <Entry key={p.title} p={p} />
-                  ))}
-                </div>
-              </div>
-            );
-          })}
+                <YearGroups list={olderYears} />
+              </Collapse>
+            </div>
+          )}
         </div>
       )}
     </section>

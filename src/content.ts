@@ -37,11 +37,11 @@ export const GROUP = {
  * `latLabel` e `lonLabel` são só o texto exibido em graus. */
 
 export const PLACE = {
-  lat: -29.71472,
-  lon: -53.71722,
+  lat: -29.712854,
+  lon: -53.717101,
   zoom: 16,
-  latLabel: "29°42′53″S",
-  lonLabel: "53°43′02″W",
+  latLabel: "29°42′46.3″S",
+  lonLabel: "53°43′01.6″W",
   lines: [
     "Departamento de Computação Aplicada",
     "Centro de Tecnologia (CT)",
@@ -207,7 +207,13 @@ export type Pub = {
 export const PUBLICATIONS_TEXT = {
   title: "Papers by year",
   searchPlaceholder: "Search title, venue, author",
+  olderLabel: "Earlier",
 };
+
+/* Publicações com mais de OLDER_AFTER anos saem da listagem principal e vão
+   para um bloco recolhido, que começa fechado. Contado a partir do ano atual:
+   com 5, em 2026 tudo de 2020 para trás é dobrado. */
+export const OLDER_AFTER = 5;
 
 export const PUBS: Pub[] = [
   {
@@ -261,6 +267,17 @@ export const PUBS: Pub[] = [
     venue: "SIBGRAPI 2022",
     type: "Conference",
     line: "sip",
+    pdf: "#",
+    doi: "#",
+    code: null,
+  },
+  {
+    year: 2020,
+    title: "Projection formats for omnidirectional video coding",
+    authors: "Silveira, T. L. T. et al.",
+    venue: "SIBGRAPI 2020",
+    type: "Conference",
+    line: "nvc",
     pdf: "#",
     doi: "#",
     code: null,
