@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { ArrowDown } from "lucide-react";
-import Graticule from "../components/Graticule";
+import PointCloud from "../components/PointCloud";
 import { FACULTY, GROUP, LINES, PUBS, STUDENTS, type Section } from "../data";
 
 /* The lens flare of the group's banner, redrawn in CSS so it carries no
@@ -75,7 +75,7 @@ export default function Hero({ go }: { go: (s: Section) => void }) {
             "linear-gradient(90deg, transparent 0%, #000 42%, #000 88%, transparent 100%)",
         }}
       >
-        <Graticule className="absolute inset-0 h-full w-full opacity-55 md:opacity-100" />
+        <PointCloud className="absolute inset-0 h-full w-full opacity-55 md:opacity-100" />
       </div>
 
       <div className="shell relative z-10 flex min-h-[min(82vh,860px)] flex-col justify-center pb-10 pt-28">
