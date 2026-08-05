@@ -93,7 +93,7 @@ export const ABOUT = {
   // O primeiro parágrafo aparece maior que os demais.
   paragraphs: [
     "VisCo develops computational methods for signal processing, visual computing, and artificial intelligence, advancing the foundations of intelligent visual systems.",
-    "Our research focuses on developing efficient computational methods for acquiring, representing, processing, and understanding visual information, combining mathematical foundations with modern machine learning and artificial intelligence.",
+    "Our research focuses on developing efficient computational methods for acquiring, representing, processing, and understanding visual information, combining mathematical foundations with modern artificial intelligence.",
     "Based at the Technology Center (CT) of the Federal University of Santa Maria (UFSM), Brazil, VisCo brings together faculty members, students, and collaborators to conduct interdisciplinary research, foster scientific collaboration, and contribute to the advancement of visual computing.",
   ],
   newsTitle: "Recent",
