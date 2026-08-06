@@ -4,7 +4,7 @@
  *
  * Este é o único arquivo que precisa ser alterado para atualizar o site:
  * textos, pessoas, publicações, projetos, notícias e localização.
- * Nenhum componente precisa ser tocado.
+ * Nenhum componente precisa ser tocado. :)
  *
  * Regras para não quebrar nada: 
  *   - Mantenha as aspas e as vírgulas exatamente como estão.
