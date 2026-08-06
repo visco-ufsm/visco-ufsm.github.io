@@ -157,31 +157,13 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    title: "Neural compression of 360° videos",
-    year: "2023–25",
-    desc: "An end-to-end pipeline for low-complexity omnidirectional video coding, targeting efficient immersive streaming.",
+    title: "Low-Complexity Methods for End-to-End Neural Compression of 360° Images and Videos",
+    year: "2024–27",
+    desc: "This project advances the state of the art in low-complexity neural compression of 360° images and videos through efficient deep learning architectures, spherical data representations, and model optimization techniques.",
     line: "nvc",
-    tags: ["Deep learning", "Video coding", "360°"],
-    active: true,
-    code: "https://github.com/visco-ufsm",
-  },
-  {
-    title: "Pattern recognition in 360° images",
-    year: "2024–26",
-    desc: "Detection and segmentation robust to the spherical geometry of omnidirectional cameras.",
-    line: "cv",
-    tags: ["CNN", "Segmentation"],
+    tags: ["T. L. T. Silveira", "FAPERGS PqG"],
     active: true,
     code: null,
-  },
-  {
-    title: "Visual mining of complex datasets",
-    year: "2024–25",
-    desc: "Knowledge extraction from high-dimensional visual data, including panoramic video and immersive scenes.",
-    line: "vdm",
-    tags: ["Data mining", "ML"],
-    active: false,
-    code: "https://github.com/visco-ufsm",
   },
 ];
 
