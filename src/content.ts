@@ -94,8 +94,9 @@ export const ABOUT = {
   paragraphs: [
     "The Visual Computing Research Group (VisCo) develops efficient computational methods for signal processing, visual computing, and artificial intelligence.",
     "Research focuses on representing, processing, compressing, and understanding visual information by combining mathematical foundations with modern artificial intelligence.",
-    "Activities encompass fundamental and applied research, emphasizing interdisciplinary collaboration, open science, and the development of reproducible computational methods for visual computing.",
-    "Founded in 2025, VisCo is based at the Technology Center (CT) of the Federal University of Santa Maria (UFSM), Brazil. The group brings together faculty members, undergraduate and graduate students, and collaborators from UFSM and partner institutions."  ],
+    "Activities emphasize fundamental and applied research, interdisciplinary collaboration, open science, and reproducible computational research.",
+    "Founded in 2025, VisCo is based at the Technology Center (CT) of the Federal University of Santa Maria (UFSM), Brazil, bringing together faculty members, undergraduate and graduate students, and collaborators from partner institutions."
+  ],
   newsTitle: "Recent",
 };
 
@@ -106,37 +107,37 @@ export const ABOUT = {
 export type LineId = "nvc" | "cv" | "osa" | "sip" | "vdm";
 
 export const RESEARCH = {
-  title: "Research lines",
-  intro: "Lines with published work link to the corresponding papers.",
-  activeLabel: "Active projects",
-  concludedLabel: "Concluded projects",
+  title: "Research",
+  intro: "Research lines that define VisCo.",
+  activeLabel: "Projects (Active)",
+  concludedLabel: "Projects (Concluded)",
 };
 
 export const LINES: { id: LineId; title: string; desc: string }[] = [
   {
     id: "nvc",
-    title: "Neural video compression",
-    desc: "End-to-end, low-complexity coding of 360° omnidirectional video with deep neural networks, for efficient immersive streaming.",
+    title: "Visual Representation",
+    desc: "Efficient methods for visual representation, transform coding, and compression.",
   },
   {
     id: "cv",
-    title: "Computer vision",
-    desc: "Pattern recognition and scene understanding for equirectangular and spherical imagery.",
+    title: "Visual Processing",
+    desc: "Image and video processing, restoration, enhancement, and computational imaging.",
   },
   {
     id: "osa",
-    title: "Omnidirectional scene analysis",
-    desc: "Detection and segmentation adapted to the geometric distortion of 360° projection.",
+    title: "Visual Understanding",
+    desc: "Computer vision, pattern recognition, scene understanding, and semantic analysis.",
   },
   {
     id: "sip",
-    title: "Signal and image processing",
-    desc: "Restoration, super-resolution and perceptual quality assessment of panoramic and spherical content.",
+    title: "Intelligent Visual Systems",
+    desc: "Deep learning, efficient AI, foundation models, and multimodal learning.",
   },
   {
     id: "vdm",
-    title: "Visual data mining",
-    desc: "Knowledge extraction from high-dimensional visual datasets, including panoramic video and immersive scenes.",
+    title: "Geometric Visual Computing",
+    desc: "Geometry-aware methods for omnidirectional imaging, 360° vision, and spatial visual data.",
   },
 ];
 
