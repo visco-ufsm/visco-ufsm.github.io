@@ -160,7 +160,7 @@ export const PROJECTS: Project[] = [
     title: "Low-Complexity Methods for End-to-End Neural Compression of 360° Images and Videos",
     year: "2024–27",
     desc: "This project advances the state of the art in low-complexity neural compression of 360° images and videos through efficient deep learning architectures, spherical data representations, and model optimization techniques.",
-    line: "nvc",
+    line: "nvc", 
     tags: ["T. L. T. Silveira", "FAPERGS PqG"],
     active: true,
     code: null,
