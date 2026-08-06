@@ -131,8 +131,8 @@ export const LINES: { id: LineId; title: string; desc: string }[] = [
   },
   {
     id: "sip",
-    title: "Intelligent Visual Systems",
-    desc: "Deep learning, efficient AI, foundation models, and multimodal learning.",
+    title: "Computational Intelligence",
+    desc: "Learning-based methods, optimization, and intelligent data analysis.",
   },
   {
     id: "vdm",
