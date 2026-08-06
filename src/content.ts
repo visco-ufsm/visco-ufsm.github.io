@@ -6,7 +6,7 @@
  * textos, pessoas, publicações, projetos, notícias e localização.
  * Nenhum componente precisa ser tocado.
  *
- * Regras para não quebrar nada: :)
+ * Regras para não quebrar nada: 
  *   - Mantenha as aspas e as vírgulas exatamente como estão.
  *   - Aspas dentro de um texto precisam de barra invertida: "o \"cubo\"".
  *   - Campos marcados como `null` significam "não existe"; para preencher,
