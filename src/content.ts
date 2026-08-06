@@ -95,7 +95,7 @@ export const ABOUT = {
     "The Visual Computing Research Group (VisCo) develops efficient computational methods for signal processing, visual computing, and artificial intelligence.",
     "Research focuses on representing, processing, compressing, and understanding visual information by combining mathematical foundations with modern artificial intelligence.",
     "Activities emphasize fundamental and applied research, interdisciplinary collaboration, open science, and reproducible computational research.",
-    "Founded in 2025, VisCo is based at the Technology Center (CT) of the Federal University of Santa Maria (UFSM), Brazil, bringing together faculty members, undergraduate and graduate students, and collaborators from partner institutions."
+    "Founded in 2025, VisCo is based at the Technology Center (CT) of the Federal University of Santa Maria (UFSM), Brazil, bringing together faculty members, students, and collaborators from partner institutions."
   ],
   newsTitle: "Recent",
 };
