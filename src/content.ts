@@ -108,7 +108,7 @@ export type LineId = "nvc" | "cv" | "osa" | "sip" | "vdm";
 
 export const RESEARCH = {
   title: "Research",
-  intro: "Research lines that define VisCo.",
+  intro: "Advancing the science and engineering of visual information.",
   activeLabel: "Projects (Active)",
   concludedLabel: "Projects (Concluded)",
 };
@@ -116,13 +116,13 @@ export const RESEARCH = {
 export const LINES: { id: LineId; title: string; desc: string }[] = [
   {
     id: "nvc",
-    title: "Visual Representation",
-    desc: "Efficient methods for visual representation, transform coding, and compression.",
+    title: "Signal Representation",
+    desc: "Efficient representations, transform methods, and approximation techniques for visual and multidimensional signals.",
   },
   {
     id: "cv",
-    title: "Visual Processing",
-    desc: "Image and video processing, restoration, enhancement, and computational imaging.",
+    title: "Signal & Image Processing",
+    desc: "Signal, image, and video processing, restoration, enhancement, filtering, and computational imaging.",
   },
   {
     id: "osa",
@@ -132,12 +132,12 @@ export const LINES: { id: LineId; title: string; desc: string }[] = [
   {
     id: "sip",
     title: "Computational Intelligence",
-    desc: "Learning-based methods, optimization, and intelligent data analysis.",
+    desc: "Machine learning, deep learning, optimization, and intelligent data analysis.",
   },
   {
     id: "vdm",
     title: "Geometric Visual Computing",
-    desc: "Geometry-aware methods for omnidirectional imaging, 360° vision, and spatial visual data.",
+    desc: "Geometry-aware methods for omnidirectional imaging, immersive media, and spatial visual data.",
   },
 ];
 
