@@ -244,7 +244,7 @@ export const PUBS: Pub[] = [
     code: null,
   },
   {
-    year: 2025,
+    year: 2026,
     title: "Evaluating Contactless Fingerprint Segmentation for Interoperable Biometric Identification Systems",
     authors: "Arcoverde Neto, E. N. and Silveira, T. L. T.",
     venue: "Revista de Informática Teórica e Aplicada",
@@ -255,7 +255,7 @@ export const PUBS: Pub[] = [
     code: null,
   },
   {
-    year: 2025,
+    year: 2026,
     title: "Do Deep Learning Models Generalize Facial Emotion Recognition in Different Age Groups?",
     authors: "Evangelista, N. L. and Silveira, T. L. T.",
     venue: "Revista de Informática Teórica e Aplicada",
@@ -266,7 +266,7 @@ export const PUBS: Pub[] = [
     code: null,
   },
   {
-    year: 2025,
+    year: 2026,
     title: "Exploring Asymmetric Autoencoder Architectures for Computationally-Efficient Neural Image Compression",
     authors: "Augusto, L. S., Arguilar, V. A., Silveira, T. L. T., and Grellert, M.",
     venue: "IEEE Design & Test",
@@ -274,6 +274,17 @@ export const PUBS: Pub[] = [
     line: "ci",
     pdf: null,
     doi: "https://doi.org/10.1109/MDAT.2025.3615794",
+    code: null,
+  },
+  {
+    year: 2026,
+    title: "Adapting Convolutions for Effective Omnidirectional Image Processing",
+    authors: "Stringhini, R. M., Silveira, T. L. T., and Jung, C. R.",
+    venue: "Journal of the Brazilian Computer Society",
+    type: "Journal",
+    line: "ci",
+    pdf: "https://journals-sol.sbc.org.br/index.php/jbcs/article/view/5654/4048",
+    doi: "https://doi.org/10.5753/jbcs.2026.5654",
     code: null,
   },
 ];
