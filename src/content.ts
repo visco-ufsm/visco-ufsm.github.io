@@ -449,14 +449,12 @@ export const JOIN = {
   title: "Join VisCo",
   columns: [
     {
-      {
       label: "Students",
       body: [
         "VisCo welcomes undergraduate and graduate students interested in signal processing, visual computing, and artificial intelligence.",
         "Students participate in cutting-edge research, scientific publications, and collaborations with national and international partners.",
         "Interested students are encouraged to contact us to discuss research opportunities.",
       ],
-},
     },
     {
       label: "Collaborators",
