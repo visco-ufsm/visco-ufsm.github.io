@@ -300,7 +300,7 @@ export const PUBS: Pub[] = [
   },
 ];
 
-/* ── Pessoas ─────────────────────────────────────────────────────────────────
+/* ── Pessoass ─────────────────────────────────────────────────────────────────
  * `photo`: caminho ou URL da foto. Para foto local, coloque o arquivo em
  * `public/photos/` e escreva "/photos/nome.jpg" (com a barra inicial).
  * `photo: ""` mostra um círculo neutro; `link: ""` deixa o nome sem link.
