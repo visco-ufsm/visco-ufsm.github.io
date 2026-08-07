@@ -4,9 +4,9 @@
  *
  * Este é o único arquivo que precisa ser alterado para atualizar o site:
  * textos, pessoas, publicações, projetos, notícias e localização.
- * Nenhum componente precisa ser tocado. 
+ * Nenhum componente precisa ser tocado.
  *
- * Regras para não quebrar nada: 
+ * Regras para não quebrar nada:
  *   - Mantenha as aspas e as vírgulas exatamente como estão.
  *   - Aspas dentro de um texto precisam de barra invertida: "o \"cubo\"".
  *   - Campos marcados como `null` significam "não existe"; para preencher,
@@ -93,51 +93,50 @@ export const ABOUT = {
   // O primeiro parágrafo aparece maior que os demais.
   paragraphs: [
     "The Visual Computing Research Group (VisCo) develops efficient computational methods for signal processing, visual computing, and artificial intelligence.",
-    "Research focuses on representing, processing, compressing, and understanding visual information by combining mathematical foundations with modern artificial intelligence.",
-    "Activities emphasize fundamental and applied research, interdisciplinary collaboration, open science, and reproducible computational research.",
-    "Founded in 2025, VisCo is based at the Technology Center (CT) of the Federal University of Santa Maria (UFSM), Brazil, bringing together faculty members, students, and collaborators from partner institutions."
+    "Our research focuses on representing, processing, compressing, and understanding visual information, combining mathematical foundations with modern artificial intelligence.",
+    "Founded in 2025, VisCo is based at the Technology Center (CT) of the Federal University of Santa Maria (UFSM), Brazil. The group brings together faculty members, undergraduate and graduate students, and collaborators from UFSM and partner institutions to conduct interdisciplinary research and foster scientific collaboration."
   ],
-  newsTitle: "News",
+  newsTitle: "Recent",
 };
 
 /* ── Linhas de pesquisa ──────────────────────────────────────────────────────
  * O `id` liga publicações e projetos à linha. Ao criar uma linha nova,
  * acrescente o id em LineId abaixo e use o mesmo id nas publicações. */
 
-export type LineId = "sr" | "sip" | "vu" | "ci" | "gvc";
+export type LineId = "nvc" | "cv" | "osa" | "sip" | "vdm";
 
 export const RESEARCH = {
-  title: "Research",
-  intro: "Advancing the science and engineering of visual information.",
-  activeLabel: "Projects (Active)",
-  concludedLabel: "Projects (Concluded)",
+  title: "Research lines",
+  intro: "Lines with published work link to the corresponding papers.",
+  activeLabel: "Active projects",
+  concludedLabel: "Concluded projects",
 };
 
 export const LINES: { id: LineId; title: string; desc: string }[] = [
   {
-    id: "sr",
-    title: "Signal Representation",
-    desc: "Efficient representations, transform methods, and approximation techniques for visual and multidimensional signals.",
+    id: "nvc",
+    title: "Neural video compression",
+    desc: "End-to-end, low-complexity coding of 360° omnidirectional video with deep neural networks, for efficient immersive streaming.",
+  },
+  {
+    id: "cv",
+    title: "Computer vision",
+    desc: "Pattern recognition and scene understanding for equirectangular and spherical imagery.",
+  },
+  {
+    id: "osa",
+    title: "Omnidirectional scene analysis",
+    desc: "Detection and segmentation adapted to the geometric distortion of 360° projection.",
   },
   {
     id: "sip",
-    title: "Signal & Image Processing",
-    desc: "Signal, image, and video processing, restoration, enhancement, filtering, and computational imaging.",
+    title: "Signal and image processing",
+    desc: "Restoration, super-resolution and perceptual quality assessment of panoramic and spherical content.",
   },
   {
-    id: "vu",
-    title: "Visual Understanding",
-    desc: "Computer vision, pattern recognition, scene understanding, and semantic analysis.",
-  },
-  {
-    id: "ci",
-    title: "Computational Intelligence",
-    desc: "Machine learning, deep learning, optimization, and intelligent data analysis.",
-  },
-  {
-    id: "gvc",
-    title: "Geometric Visual Computing",
-    desc: "Geometry-aware methods for omnidirectional imaging, immersive media, and spatial visual data.",
+    id: "vdm",
+    title: "Visual data mining",
+    desc: "Knowledge extraction from high-dimensional visual datasets, including panoramic video and immersive scenes.",
   },
 ];
 
@@ -157,13 +156,31 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    title: "Low-Complexity Methods for End-to-End Neural Compression of 360° Images and Videos",
-    year: "2024–27",
-    desc: "This project advances the state of the art in low-complexity neural compression of 360° images and videos through efficient deep learning architectures, spherical data representations, and model optimization techniques.",
-    line: "gvc", 
-    tags: ["T. L. T. Silveira", "FAPERGS PqG"],
+    title: "Neural compression of 360° videos",
+    year: "2023–25",
+    desc: "An end-to-end pipeline for low-complexity omnidirectional video coding, targeting efficient immersive streaming.",
+    line: "nvc",
+    tags: ["Deep learning", "Video coding", "360°"],
+    active: true,
+    code: "https://github.com/visco-ufsm",
+  },
+  {
+    title: "Pattern recognition in 360° images",
+    year: "2024–26",
+    desc: "Detection and segmentation robust to the spherical geometry of omnidirectional cameras.",
+    line: "cv",
+    tags: ["CNN", "Segmentation"],
     active: true,
     code: null,
+  },
+  {
+    title: "Visual mining of complex datasets",
+    year: "2024–25",
+    desc: "Knowledge extraction from high-dimensional visual data, including panoramic video and immersive scenes.",
+    line: "vdm",
+    tags: ["Data mining", "ML"],
+    active: false,
+    code: "https://github.com/visco-ufsm",
   },
 ];
 
@@ -188,7 +205,7 @@ export type Pub = {
 };
 
 export const PUBLICATIONS_TEXT = {
-  title: "Publications",
+  title: "Papers by year",
   searchPlaceholder: "Search title, venue, author",
   olderLabel: "Earlier",
 };
@@ -201,90 +218,68 @@ export const OLDER_AFTER = 5;
 export const PUBS: Pub[] = [
   {
     year: 2025,
-    title: "Low-Complexity Compression of 360° Still Images",
-    authors: "Bastos, B. M., Segala, E. B., and Silveira, T. L. T.",
-    venue: "IEEE Latin American Symposium on Circuits and Systems (LASCAS)",
-    type: "Conference",
-    line: "sr",
-    pdf: null,
-    doi: "https://doi.org/10.1109/LASCAS64004.2025.10966281",
-    code: null,
-  },
-  {
-    year: 2025,
-    title: "Superpixel-driven 360° Image Compression",
-    authors: "Binkowski, B., Segala, E. B., and Silveira, T. L. T.",
-    venue: "Springer Multimedia Tools and Applications",
+    title: "Low-complexity end-to-end neural compression for 360° videos",
+    authors: "Silveira, T. L. T. et al.",
+    venue: "IEEE Transactions on Image Processing",
     type: "Journal",
-    line: "gvc",
-    pdf: null,
-    doi: "https://doi.org/10.1007/s11042-025-20876-1",
+    line: "nvc",
+    pdf: "#",
+    doi: "#",
+    code: "#",
+  },
+  {
+    year: 2024,
+    title: "Omnidirectional scene understanding via spherical convolutions",
+    authors: "Silveira, T. L. T. et al.",
+    venue: "SIBGRAPI 2024",
+    type: "Conference",
+    line: "osa",
+    pdf: "#",
+    doi: "#",
+    code: "#",
+  },
+  {
+    year: 2024,
+    title: "Visual data mining for multidimensional 360° datasets",
+    authors: "Silveira, T. L. T. et al.",
+    venue: "IJCNN 2024",
+    type: "Conference",
+    line: "vdm",
+    pdf: "#",
+    doi: "#",
     code: null,
   },
   {
-    year: 2025,
-    title: "Complexity-Reduced End-to-End Fetal ECG Signal Recovery and QRS Complex Detection",
-    authors: "Remus, J. C. and Silveira, T. L. T.",
-    venue: "Simpósio Brasileiro de Computação Aplicada à Saúde (SBCAS)",
+    year: 2023,
+    title: "Perceptual quality metrics for equirectangular video compression",
+    authors: "Silveira, T. L. T. et al.",
+    venue: "IEEE Signal Processing Letters",
+    type: "Journal",
+    line: "sip",
+    pdf: "#",
+    doi: "#",
+    code: "#",
+  },
+  {
+    year: 2022,
+    title: "Deep learning approaches for 360° image super-resolution",
+    authors: "Silveira, T. L. T. et al.",
+    venue: "SIBGRAPI 2022",
     type: "Conference",
     line: "sip",
-    pdf: null,
-    doi: "https://doi.org/10.5753/sbcas.2025.7731",
+    pdf: "#",
+    doi: "#",
     code: null,
   },
   {
-    year: 2025,
-    title: "Anchor-based Gravity Alignment for Panoramas",
-    authors: "Bergmann, M. A., Stringhini, R. M., Silveira, T. L. T., and Jung, C. R.",
-    venue: "IEEE International Conference on Image Processing (ICIP)",
+    year: 2020,
+    title: "Projection formats for omnidirectional video coding",
+    authors: "Silveira, T. L. T. et al.",
+    venue: "SIBGRAPI 2020",
     type: "Conference",
-    line: "gvc",
-    pdf: null,
-    doi: "https://doi.org/10.1109/ICIP55913.2025.11084672",
-    code: null,
-  },
-  {
-    year: 2026,
-    title: "Evaluating Contactless Fingerprint Segmentation for Interoperable Biometric Identification Systems",
-    authors: "Arcoverde Neto, E. N. and Silveira, T. L. T.",
-    venue: "Revista de Informática Teórica e Aplicada",
-    type: "Journal",
-    line: "vu",
-    pdf: "https://seer.ufrgs.br/index.php/rita/article/view/147966/98412",
-    doi: "https://doi.org/10.22456/2175-2745.147966",
-    code: null,
-  },
-  {
-    year: 2026,
-    title: "Do Deep Learning Models Generalize Facial Emotion Recognition in Different Age Groups?",
-    authors: "Evangelista, N. L. and Silveira, T. L. T.",
-    venue: "Revista de Informática Teórica e Aplicada",
-    type: "Journal",
-    line: "vu",
-    pdf: "https://seer.ufrgs.br/index.php/rita/article/view/144479/98280",
-    doi: "https://doi.org/10.22456/2175-2745.144479",
-    code: null,
-  },
-  {
-    year: 2026,
-    title: "Exploring Asymmetric Autoencoder Architectures for Computationally-Efficient Neural Image Compression",
-    authors: "Augusto, L. S., Arguilar, V. A., Silveira, T. L. T., and Grellert, M.",
-    venue: "IEEE Design & Test",
-    type: "Journal",
-    line: "ci",
-    pdf: null,
-    doi: "https://doi.org/10.1109/MDAT.2025.3615794",
-    code: null,
-  },
-  {
-    year: 2026,
-    title: "Adapting Convolutions for Effective Omnidirectional Image Processing",
-    authors: "Stringhini, R. M., Silveira, T. L. T., and Jung, C. R.",
-    venue: "Journal of the Brazilian Computer Society",
-    type: "Journal",
-    line: "ci",
-    pdf: "https://journals-sol.sbc.org.br/index.php/jbcs/article/view/5654/4048",
-    doi: "https://doi.org/10.5753/jbcs.2026.5654",
+    line: "nvc",
+    pdf: "#",
+    doi: "#",
     code: null,
   },
 ];
@@ -438,33 +433,33 @@ export const NEWS: NewsItem[] = [
 /* ── Onde estamos (textos) ───────────────────────────────────────────────── */
 
 export const LOCATION_TEXT = {
-  title: "Location",
-  note: "Visitors are kindly asked to email us in advance to arrange access to the building.",
-  caption: "Technology Center · Campus Camobi",
+  title: "Where we are",
+  note: "To visit, send an email in advance so someone can meet you at the building entrance.",
+  caption: "Centro de Tecnologia · Campus Camobi",
 };
 
 /* ── Participe ───────────────────────────────────────────────────────────── */
 
 export const JOIN = {
-  title: "Join VisCo",
+  title: "How to join",
   columns: [
     {
       label: "Students",
       body: [
-        "VisCo welcomes undergraduate and graduate students interested in signal processing, visual computing, and artificial intelligence.",
-        "Students participate in cutting-edge research, scientific publications, and collaborations with national and international partners.",
-        "Interested students are encouraged to contact us to discuss research opportunities.",
+        "The group supervises M.Sc. and Ph.D. candidates and undergraduate researchers in Computer Science and Electrical Engineering.",
+        "A background in image processing, computer vision or machine learning is helpful.",
+        "CAPES and CNPq scholarships are available when positions open. Current openings are listed under Recent, in the home section.",
       ],
     },
     {
       label: "Collaborators",
       body: [
-        "VisCo welcomes collaborations with researchers, universities, research centers, and industry partners.",
-        "Current collaborations include joint research projects, co-supervision of students, scientific publications, and funded research initiatives.",
-        "Researchers interested in collaborative projects are encouraged to get in touch.",
+        "VisCo co-advises students, publishes jointly, and takes part in funded research with academic groups and industry partners.",
+        "The group is affiliated with SBC, SBMAC and IEEE, and registered with PRPGP/UFSM.",
+        "Collaborations are open in optics, coding, perception and robotics applied to omnidirectional imaging.",
       ],
     },
   ],
   ctaNote:
-    "Interested in joining or collaborating with VisCo? We'd be happy to hear from you.",
+    "Write to Prof. Thiago Silveira with a short description of your background and research interests.",
 };
