@@ -14,6 +14,11 @@
  *   - Os identificadores das linhas de pesquisa (LineId) ligam publicações e
  *     projetos às linhas. Se criar uma linha nova, adicione o id na lista
  *     LineId logo abaixo.
+ *   - Quebra de linha dentro de um texto: escreva \n no meio da string.
+ *     Ex.: role: "Lead Faculty\nHead of Lab". Funciona nos campos de pessoas.
+ *   - Imagens locais: coloque o arquivo em `public/photos/` e escreva o
+ *     caminho começando com barra: photo: "/photos/tltsilveira.jpg".
+ *     (Pastas fora de `public/` não são servidas pelo site.)
  *
  * Depois de editar: `pnpm build` (ou só commitar — o GitHub Actions publica).
  * ========================================================================== */
@@ -143,13 +148,14 @@ export const LINES: { id: LineId; title: string; desc: string }[] = [
 
 /* ── Projetos ────────────────────────────────────────────────────────────────
  * `active: true` aparece em "Active projects"; `false` vai para a lista
- * recolhida de concluídos. `code: null` esconde o link de código. */
+ * recolhida de concluídos. `code: null` esconde o link de código.
+ * `lines` aceita uma ou mais áreas: lines: ["gvc"] ou lines: ["gvc", "ci"]. */
 
 export type Project = {
   title: string;
   year: string;
   desc: string;
-  line: LineId;
+  lines: LineId[];
   tags: string[];
   active: boolean;
   code: string | null;
@@ -160,7 +166,7 @@ export const PROJECTS: Project[] = [
     title: "Low-Complexity Methods for End-to-End Neural Compression of 360° Images and Videos",
     year: "2024–27",
     desc: "This project advances the state of the art in low-complexity neural compression of 360° images and videos through efficient deep learning architectures, spherical data representations, and model optimization techniques.",
-    line: "gvc", 
+    lines: ["gvc", "ci"],
     tags: ["T. L. T. Silveira", "FAPERGS PqG"],
     active: true,
     code: null,
@@ -170,7 +176,11 @@ export const PROJECTS: Project[] = [
 /* ── Publicações ─────────────────────────────────────────────────────────────
  * A página agrupa sozinha por ano, do mais novo para o mais antigo. Basta
  * acrescentar o item na lista, em qualquer posição.
- * `type` aceita "Journal" ou "Conference".
+ * `type` aceita "Journal" ou "Conference" — aparece como a bolinha colorida
+ *   antes do título (roxa = journal, verde = conference).
+ * `lines` aceita uma ou mais áreas: lines: ["sr"] ou lines: ["sr", "gvc"].
+ * `collab: true` marca papers com colaboradores de fora do VisCo — mostra a
+ *   etiqueta "Collaboration" na entrada. Omita o campo nos demais.
  * `pdf`, `doi` e `code`: use null para esconder o link. */
 
 export type PubType = "Journal" | "Conference";
@@ -181,7 +191,8 @@ export type Pub = {
   authors: string;
   venue: string;
   type: PubType;
-  line: LineId;
+  lines: LineId[];
+  collab?: boolean;
   pdf: string | null;
   doi: string | null;
   code: string | null;
@@ -205,7 +216,7 @@ export const PUBS: Pub[] = [
     authors: "Bastos, B. M., Segala, E. B., and Silveira, T. L. T.",
     venue: "IEEE Latin American Symposium on Circuits and Systems (LASCAS)",
     type: "Conference",
-    line: "sr",
+    lines: ["sr"],
     pdf: null,
     doi: "https://doi.org/10.1109/LASCAS64004.2025.10966281",
     code: null,
@@ -216,7 +227,7 @@ export const PUBS: Pub[] = [
     authors: "Binkowski, B., Segala, E. B., and Silveira, T. L. T.",
     venue: "Springer Multimedia Tools and Applications",
     type: "Journal",
-    line: "gvc",
+    lines: ["gvc"],
     pdf: null,
     doi: "https://doi.org/10.1007/s11042-025-20876-1",
     code: null,
@@ -227,7 +238,7 @@ export const PUBS: Pub[] = [
     authors: "Remus, J. C. and Silveira, T. L. T.",
     venue: "Simpósio Brasileiro de Computação Aplicada à Saúde (SBCAS)",
     type: "Conference",
-    line: "sip",
+    lines: ["sip"],
     pdf: null,
     doi: "https://doi.org/10.5753/sbcas.2025.7731",
     code: null,
@@ -238,7 +249,7 @@ export const PUBS: Pub[] = [
     authors: "Bergmann, M. A., Stringhini, R. M., Silveira, T. L. T., and Jung, C. R.",
     venue: "IEEE International Conference on Image Processing (ICIP)",
     type: "Conference",
-    line: "gvc",
+    lines: ["gvc"],
     pdf: null,
     doi: "https://doi.org/10.1109/ICIP55913.2025.11084672",
     code: null,
@@ -249,7 +260,7 @@ export const PUBS: Pub[] = [
     authors: "Arcoverde Neto, E. N. and Silveira, T. L. T.",
     venue: "Revista de Informática Teórica e Aplicada",
     type: "Journal",
-    line: "vu",
+    lines: ["vu"],
     pdf: "https://seer.ufrgs.br/index.php/rita/article/view/147966/98412",
     doi: "https://doi.org/10.22456/2175-2745.147966",
     code: null,
@@ -260,7 +271,7 @@ export const PUBS: Pub[] = [
     authors: "Evangelista, N. L. and Silveira, T. L. T.",
     venue: "Revista de Informática Teórica e Aplicada",
     type: "Journal",
-    line: "vu",
+    lines: ["vu"],
     pdf: "https://seer.ufrgs.br/index.php/rita/article/view/144479/98280",
     doi: "https://doi.org/10.22456/2175-2745.144479",
     code: null,
@@ -271,7 +282,7 @@ export const PUBS: Pub[] = [
     authors: "Augusto, L. S., Arguilar, V. A., Silveira, T. L. T., and Grellert, M.",
     venue: "IEEE Design & Test",
     type: "Journal",
-    line: "ci",
+    lines: ["ci"],
     pdf: null,
     doi: "https://doi.org/10.1109/MDAT.2025.3615794",
     code: null,
@@ -282,7 +293,7 @@ export const PUBS: Pub[] = [
     authors: "Stringhini, R. M., Silveira, T. L. T., and Jung, C. R.",
     venue: "Journal of the Brazilian Computer Society",
     type: "Journal",
-    line: "ci",
+    lines: ["ci"],
     pdf: "https://journals-sol.sbc.org.br/index.php/jbcs/article/view/5654/4048",
     doi: "https://doi.org/10.5753/jbcs.2026.5654",
     code: null,
@@ -290,9 +301,10 @@ export const PUBS: Pub[] = [
 ];
 
 /* ── Pessoas ─────────────────────────────────────────────────────────────────
- * `photo`: caminho ou URL da foto. Para usar um arquivo do repositório,
- * coloque a imagem em `public/people/` e escreva "/people/nome.jpg".
- * `link`: para onde o nome aponta (Lattes, GitHub, página pessoal). */
+ * `photo`: caminho ou URL da foto. Para foto local, coloque o arquivo em
+ * `public/photos/` e escreva "/photos/nome.jpg" (com a barra inicial).
+ * `photo: ""` mostra um círculo neutro; `link: ""` deixa o nome sem link.
+ * Para quebrar linha em `role` ou `area`, use \n dentro do texto. */
 
 export type Person = {
   name: string;
@@ -315,7 +327,7 @@ export const FACULTY: Person[] = [
     name: "Thiago L. T. da Silveira",
     role: "Lead Faculty",
     area: "signal/image processing · pattern recognition · computer vision",
-    photo: "./photos/tltsilveira.jpg",
+    photo: "/photos/tltsilveira.jpg",
     link: "https://tltsilveira.github.io/",
   },
   {

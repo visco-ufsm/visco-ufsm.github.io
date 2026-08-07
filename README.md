@@ -67,7 +67,10 @@ Regras para não quebrar nada:
 
 - Mantenha aspas e vírgulas exatamente como estão nos itens existentes.
 - `null` significa "não existe" (ex.: `code: null` esconde o link de código).
-- Para fotos locais, coloque a imagem em `public/people/` e use `"/people/nome.jpg"`.
+- Para fotos locais, coloque a imagem em `public/photos/` e use `"/photos/nome.jpg"`
+  (a barra inicial importa; pastas fora de `public/` não são servidas).
+- Para quebrar linha dentro de um texto (ex.: depois de "Lead Faculty"), escreva
+  `\n` no meio da string: `role: "Lead Faculty\nHead of Lab"`.
 
 ## Publicando
 

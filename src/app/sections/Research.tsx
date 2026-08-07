@@ -58,7 +58,7 @@ export default function Research({
       <div className="border-t border-rule">
         {LINES.map((l, i) => {
           const n = pubsInLine(l.id);
-          const projects = PROJECTS.filter((p) => p.line === l.id).length;
+          const projects = PROJECTS.filter((p) => p.lines.includes(l.id)).length;
           const row = (
             <>
               <h3 className="dsp flex items-center gap-3 text-[1.25rem] md:text-[1.375rem]">

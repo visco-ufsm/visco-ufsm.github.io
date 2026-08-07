@@ -30,8 +30,13 @@ export default function NewsCarousel() {
 
   const body = (
     <>
-      <div className="overflow-hidden border border-rule bg-white">
-        <Thumb src={item.img} className="aspect-[16/10] w-full object-cover" />
+      {/* The image is the flexible part: it grows or shrinks so the card's
+          bottom edge stays level with the text column beside the carousel. */}
+      <div className="relative min-h-[11rem] flex-1 overflow-hidden border border-rule bg-white">
+        <Thumb
+          src={item.img}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
       </div>
       <div className="mt-4 flex items-center gap-3">
         <span className="num text-[0.7rem] text-faint">{item.date}</span>
@@ -49,6 +54,7 @@ export default function NewsCarousel() {
 
   return (
     <section
+      className="flex h-full flex-col"
       aria-label="Recent news"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
@@ -88,17 +94,21 @@ export default function NewsCarousel() {
         </div>
       </div>
 
-      <div key={idx} style={{ animation: "fadeIn .45s ease both" }}>
+      <div
+        key={idx}
+        className="flex flex-1 flex-col"
+        style={{ animation: "fadeIn .45s ease both" }}
+      >
         {item.href ? (
           <a
             href={item.href}
             {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            className="group block"
+            className="group flex h-full flex-col"
           >
             {body}
           </a>
         ) : (
-          <div className="group">{body}</div>
+          <div className="group flex h-full flex-col">{body}</div>
         )}
       </div>
 

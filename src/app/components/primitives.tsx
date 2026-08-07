@@ -54,7 +54,7 @@ export function Thumb({
   className?: string;
 }) {
   const [failed, setFailed] = useState(false);
-  if (failed)
+  if (failed || !src)
     return (
       <div
         className={className}

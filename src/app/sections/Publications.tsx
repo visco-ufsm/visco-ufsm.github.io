@@ -2,15 +2,15 @@ import { useMemo, useState } from "react";
 import { Search, X } from "lucide-react";
 import {
   LINES,
-  LINE_TITLE,
   OLDER_AFTER,
   PUBLICATIONS_TEXT,
   PUBS,
+  TAG_COLOR,
   type LineId,
   type Pub,
   type PubType,
 } from "../data";
-import { Collapse, SectionHead, Tag } from "../components/primitives";
+import { Collapse, SectionHead } from "../components/primitives";
 
 const TYPES = ["All", "Journal", "Conference"] as const;
 
@@ -23,7 +23,17 @@ function Entry({ p }: { p: Pub }) {
   return (
     <article className="border-b border-rule py-5">
       <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
-        <h4 className="dsp max-w-[62ch] text-[1.0625rem] leading-snug">{p.title}</h4>
+        {/* The dot carries the venue type implicitly: iris = journal,
+            jade = conference. The filter buttons above are the legend. */}
+        <h4 className="dsp max-w-[62ch] text-[1.0625rem] leading-snug">
+          <span
+            title={p.type}
+            className="mb-0.5 mr-2.5 inline-block h-[7px] w-[7px] rounded-full align-middle"
+            style={{ background: TAG_COLOR[p.type] }}
+          />
+          <span className="sr-only">{p.type}: </span>
+          {p.title}
+        </h4>
         <div className="mono flex shrink-0 gap-4">
           {links.map(([label, href]) =>
             href ? (
@@ -41,8 +51,12 @@ function Entry({ p }: { p: Pub }) {
       <div className="mt-2.5 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[0.8125rem] text-mute">
         <span>{p.authors}</span>
         <span className="italic">{p.venue}</span>
-        <Tag type={p.type} />
-        <span className="mono text-faint">{LINE_TITLE[p.line]}</span>
+        {p.collab && (
+          <span className="mono inline-flex items-center gap-1.5 text-blush">
+            <span className="h-[5px] w-[5px] rounded-full border border-blush" />
+            Collaboration
+          </span>
+        )}
       </div>
     </article>
   );
@@ -62,7 +76,7 @@ export default function Publications({
     const q = query.trim().toLowerCase();
     return PUBS.filter((p) => {
       if (type !== "All" && p.type !== (type as PubType)) return false;
-      if (line && p.line !== line) return false;
+      if (line && !p.lines.includes(line)) return false;
       if (!q) return true;
       return (
         p.title.toLowerCase().includes(q) ||
@@ -138,10 +152,17 @@ export default function Publications({
             <button
               key={t}
               onClick={() => setType(t)}
-              className={`relative pb-1.5 transition-colors ${
+              className={`relative inline-flex items-center gap-1.5 pb-1.5 transition-colors ${
                 type === t ? "text-ink" : "text-faint hover:text-mute"
               }`}
             >
+              {/* Doubles as the legend for the dot shown on each paper. */}
+              {t !== "All" && (
+                <span
+                  className="h-[6px] w-[6px] rounded-full"
+                  style={{ background: TAG_COLOR[t] }}
+                />
+              )}
               {t}
               <span
                 className={`spectrum-bar absolute inset-x-0 bottom-0 h-px origin-left transition-transform duration-300 ${

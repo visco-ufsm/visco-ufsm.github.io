@@ -7,7 +7,9 @@ export default function About() {
     <section id="about" className="band shell border-b border-rule">
       <SectionHead title={ABOUT.title} />
 
-      <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+      {/* items-stretch + h-full down the carousel: its bottom edge ends level
+          with the last paragraph, the image absorbing the height difference. */}
+      <div className="grid items-stretch gap-12 lg:grid-cols-12 lg:gap-16">
         <Reveal className="lg:col-span-7">
           {/* The first paragraph leads, the rest follow at reading size. */}
           {ABOUT.paragraphs.map((text, i) =>
@@ -29,7 +31,7 @@ export default function About() {
           )}
         </Reveal>
 
-        <Reveal delay={80} className="lg:col-span-5">
+        <Reveal delay={80} className="h-full lg:col-span-5">
           <NewsCarousel />
         </Reveal>
       </div>

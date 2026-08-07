@@ -1,12 +1,15 @@
 import { ALUMNI, FACULTY, PEOPLE_TEXT, STUDENTS, type Person } from "../data";
 import { Collapse, Reveal, SectionHead, Thumb } from "../components/primitives";
 
+const hasLink = (p: Person) => p.link !== "" && p.link !== "#";
+
 function Portrait({ p, size }: { p: Person; size: number }) {
+  const Shell = hasLink(p) ? "a" : "span";
   return (
-    <a
-      href={p.link}
-      target="_blank"
-      rel="noopener noreferrer"
+    <Shell
+      {...(hasLink(p)
+        ? { href: p.link, target: "_blank", rel: "noopener noreferrer" }
+        : {})}
       className="group block shrink-0 rounded-full"
       style={{ width: size, height: size }}
       tabIndex={-1}
@@ -21,7 +24,7 @@ function Portrait({ p, size }: { p: Person; size: number }) {
           className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
         />
       </span>
-    </a>
+    </Shell>
   );
 }
 
@@ -30,16 +33,22 @@ function FacultyCard({ p }: { p: Person }) {
     <div className="flex items-center gap-5 border-b border-rule py-7 sm:border-b-0 sm:py-0">
       <Portrait p={p} size={92} />
       <div className="min-w-0">
-        <a
-          href={p.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="dsp ulink text-[1.0625rem]"
-        >
-          {p.name}
-        </a>
-        <p className="mono mt-2 text-faint">{p.role}</p>
-        <p className="mt-1 text-[0.875rem] text-mute">{p.area}</p>
+        {hasLink(p) ? (
+          <a
+            href={p.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="dsp ulink text-[1.0625rem]"
+          >
+            {p.name}
+          </a>
+        ) : (
+          <span className="dsp text-[1.0625rem]">{p.name}</span>
+        )}
+        {/* whitespace-pre-line: a \n written in content.ts becomes a real
+            line break here. */}
+        <p className="mono mt-2 whitespace-pre-line text-faint">{p.role}</p>
+        <p className="mt-1 whitespace-pre-line text-[0.875rem] text-mute">{p.area}</p>
       </div>
     </div>
   );
@@ -50,16 +59,24 @@ function StudentCard({ p }: { p: Person }) {
     <div className="flex flex-col items-center gap-3 text-center">
       <Portrait p={p} size={78} />
       <div>
-        <a
-          href={p.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ulink text-[0.875rem] font-medium leading-snug"
-        >
-          {p.name}
-        </a>
-        <p className="mono mt-1.5 text-[0.625rem] text-faint">{p.role}</p>
-        <p className="mt-1 text-[0.8125rem] leading-snug text-mute">{p.area}</p>
+        {hasLink(p) ? (
+          <a
+            href={p.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ulink text-[0.875rem] font-medium leading-snug"
+          >
+            {p.name}
+          </a>
+        ) : (
+          <span className="text-[0.875rem] font-medium leading-snug">{p.name}</span>
+        )}
+        <p className="mono mt-1.5 whitespace-pre-line text-[0.625rem] text-faint">
+          {p.role}
+        </p>
+        <p className="mt-1 whitespace-pre-line text-[0.8125rem] leading-snug text-mute">
+          {p.area}
+        </p>
       </div>
     </div>
   );

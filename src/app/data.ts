@@ -13,8 +13,10 @@ export const LINE_TITLE: Record<LineId, string> = Object.fromEntries(
   LINES.map((l) => [l.id, l.title]),
 ) as Record<LineId, string>;
 
-/** How many publications a research line has produced. */
-export const pubsInLine = (id: LineId) => PUBS.filter((p) => p.line === id).length;
+/** How many publications a research line has produced. A paper may belong to
+ *  more than one line, so it counts toward each of them. */
+export const pubsInLine = (id: LineId) =>
+  PUBS.filter((p) => p.lines.includes(id)).length;
 
 /** Dot colour for news tags and publication types. */
 export const TAG_COLOR: Record<NewsTag | PubType, string> = {
