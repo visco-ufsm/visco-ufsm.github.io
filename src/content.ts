@@ -43,10 +43,10 @@ export const PLACE = {
   latLabel: "29°42′46.3″S",
   lonLabel: "53°43′01.6″W",
   lines: [
-    "Department of Applied Computing",
     "Technology Center (CT)",
-    "Ave. Roraima 1000, Camobi",
-    "Santa Maria – RS, 97105-900, Brazil",
+    "Department of Applied Computing (DCOM)",
+    "Federal University of Santa Maria (UFSM)",
+    "Ave. Roraima 1000, Santa Maria – RS, Brazil",
   ],
 };
 
@@ -440,7 +440,7 @@ export const NEWS: NewsItem[] = [
 export const LOCATION_TEXT = {
   title: "Location",
   note: "Visitors are kindly asked to email us in advance to arrange access to the building.",
-  caption: "Technology Center · Campus Camobi",
+  caption: "CT · UFSM",
 };
 
 /* ── Participe ───────────────────────────────────────────────────────────── */
