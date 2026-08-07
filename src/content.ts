@@ -438,33 +438,35 @@ export const NEWS: NewsItem[] = [
 /* ── Onde estamos (textos) ───────────────────────────────────────────────── */
 
 export const LOCATION_TEXT = {
-  title: "Where we are",
-  note: "To visit, send an email in advance so someone can meet you at the building entrance.",
-  caption: "Centro de Tecnologia · Campus Camobi",
+  title: "Location",
+  note: "Visitors are kindly asked to email us in advance to arrange access to the building.",
+  caption: "Technology Center · Campus Camobi",
 };
 
 /* ── Participe ───────────────────────────────────────────────────────────── */
 
 export const JOIN = {
-  title: "How to join",
+  title: "Join VisCo",
   columns: [
     {
+      {
       label: "Students",
       body: [
-        "The group supervises M.Sc. and Ph.D. candidates and undergraduate researchers in Computer Science and Electrical Engineering.",
-        "A background in image processing, computer vision or machine learning is helpful.",
-        "CAPES and CNPq scholarships are available when positions open. Current openings are listed under Recent, in the home section.",
+        "VisCo welcomes undergraduate and graduate students interested in signal processing, visual computing, and artificial intelligence.",
+        "Students participate in cutting-edge research, scientific publications, and collaborations with national and international partners.",
+        "Interested students are encouraged to contact us to discuss research opportunities.",
       ],
+},
     },
     {
       label: "Collaborators",
       body: [
-        "VisCo co-advises students, publishes jointly, and takes part in funded research with academic groups and industry partners.",
-        "The group is affiliated with SBC, SBMAC and IEEE, and registered with PRPGP/UFSM.",
-        "Collaborations are open in optics, coding, perception and robotics applied to omnidirectional imaging.",
+        "VisCo welcomes collaborations with researchers, universities, research centers, and industry partners.",
+        "Current collaborations include joint research projects, co-supervision of students, scientific publications, and funded research initiatives.",
+        "Researchers interested in collaborative projects are encouraged to get in touch.",
       ],
     },
   ],
   ctaNote:
-    "Write to Prof. Thiago Silveira with a short description of your background and research interests.",
+    "Interested in joining or collaborating with VisCo? We'd be happy to hear from you.",
 };
