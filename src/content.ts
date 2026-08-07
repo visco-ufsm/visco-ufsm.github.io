@@ -403,6 +403,41 @@ export const STUDENTS: Person[] = [
     photo: "",
     link: "",
   },
+  {
+    name: "Jonathan Cardozo",
+    role: "Thesis Student",
+    area: "Transform coding",
+    photo: "",
+    link: "",
+  },
+  {
+    name: "Lucas B. S. Ribeiro",
+    role: "Thesis Student",
+    area: "Neural compression",
+    photo: "",
+    link: "",
+  },
+  {
+    name: "Maria C. B. Silva",
+    role: "Thesis Student",
+    area: "Signal processing",
+    photo: "",
+    link: "",
+  },
+  {
+    name: "Alejandro V. T. Brites",
+    role: "Thesis Student",
+    area: "Volume segmentation",
+    photo: "",
+    link: "",
+  },
+  {
+    name: "Alice Z. Marques",
+    role: "Thesis Student",
+    area: "Signal processing",
+    photo: "",
+    link: "",
+  },
 ];
 
 /* Registro de quem passou pelo grupo. */
