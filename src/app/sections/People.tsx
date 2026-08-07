@@ -99,7 +99,7 @@ export default function People() {
           </Reveal>
         )}
         {FACULTY.length > 1 && (
-          <div className="mt-8 grid gap-x-10 gap-y-8 border-t border-rule pt-8 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2 xl:grid-cols-3">
             {FACULTY.slice(1).map((p, i) => (
               <Reveal key={p.name} delay={i * 45}>
                 <FacultyCard p={p} />
