@@ -356,21 +356,21 @@ export const FACULTY: Person[] = [
 export const STUDENTS: Person[] = [
   {
     name: "Eduardo M. da Silveira",
-    role: "M.Sc.",
+    role: "M.Sc. Student",
     area: "Gaussian splatting",
     photo: "",
     link: "",
   },
   {
     name: "Giovanni Gaiardo",
-    role: "M.Sc.",
+    role: "M.Sc. Student",
     area: "Neural compression",
     photo: "",
     link: "",
   },
   {
     name: "Henrique P. Gerhardt",
-    role: "M.Sc.",
+    role: "M.Sc. Student",
     area: "Optical flow",
     photo: "",
     link: "",
@@ -384,14 +384,14 @@ export const STUDENTS: Person[] = [
   },
   {
     name: "Diego R. Chaves",
-    role: "UG Researcher",
+    role: "UG Researcher | Thesis Student",
     area: "Neural compression",
     photo: "",
     link: "",
   },
   {
     name: "Gabriel S. Baggio",
-    role: "UG Researcher",
+    role: "UG Researcher | Thesis Student",
     area: "Neural compression",
     photo: "",
     link: "",
@@ -407,10 +407,10 @@ export const STUDENTS: Person[] = [
 
 /* Registro de quem passou pelo grupo. */
 export const ALUMNI: { name: string; degree: string }[] = [
-  { name: "Bruno M. Bastos", degree: "B.Sc. 2025" },
   { name: "Bruno Binkowski", degree: "M.Sc. 2025" },
   { name: "Julia C. Remus", degree: "M.Sc. 2025" },
   { name: "Manuel S. T. Veras", degree: "M.Sc. 2025" },
+  { name: "Bruno M. Bastos", degree: "B.Sc. 2025" },
 ];
 
 /* ── Notícias (carrossel do "Who we are") ────────────────────────────────────
