@@ -44,9 +44,9 @@ export const PLACE = {
   lonLabel: "53°43′01.6″W",
   lines: [
     "Technology Center (CT)",
-    "Department of Applied Computing (DCOM)",
     "Federal University of Santa Maria (UFSM)",
-    "Ave. Roraima 1000, Santa Maria – RS, Brazil",
+    "Santa Maria, RS, Brazil",
+    "Camobi Campus",
   ],
 };
 
