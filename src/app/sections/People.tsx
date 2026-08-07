@@ -91,13 +91,22 @@ export default function People() {
       />
 
       <Collapse label={PEOPLE_TEXT.facultyLabel} count={FACULTY.length}>
-        <div className="grid gap-x-10 gap-y-8 sm:grid-cols-2 xl:grid-cols-3">
-          {FACULTY.map((p) => (
-            <Reveal key={p.name}>
-              <FacultyCard p={p} />
-            </Reveal>
-          ))}
-        </div>
+        {/* The first entry is the lead and gets a row of their own;
+            the remaining faculty follow on the row below, left-aligned. */}
+        {FACULTY.length > 0 && (
+          <Reveal>
+            <FacultyCard p={FACULTY[0]} />
+          </Reveal>
+        )}
+        {FACULTY.length > 1 && (
+          <div className="mt-8 grid gap-x-10 gap-y-8 border-t border-rule pt-8 sm:grid-cols-2 xl:grid-cols-3">
+            {FACULTY.slice(1).map((p, i) => (
+              <Reveal key={p.name} delay={i * 45}>
+                <FacultyCard p={p} />
+              </Reveal>
+            ))}
+          </div>
+        )}
       </Collapse>
 
       <Collapse label={PEOPLE_TEXT.studentsLabel} count={STUDENTS.length}>
