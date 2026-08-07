@@ -104,7 +104,7 @@ export const ABOUT = {
  * O `id` liga publicações e projetos à linha. Ao criar uma linha nova,
  * acrescente o id em LineId abaixo e use o mesmo id nas publicações. */
 
-export type LineId = "nvc" | "cv" | "osa" | "sip" | "vdm";
+export type LineId = "sr" | "sip" | "vu" | "ci" | "gvc";
 
 export const RESEARCH = {
   title: "Research",
