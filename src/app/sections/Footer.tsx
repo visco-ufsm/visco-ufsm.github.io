@@ -18,7 +18,7 @@ export default function Footer({ go }: { go: (s: Section) => void }) {
             <span className="mono text-faint">{GROUP.full}</span>
           </div>
           <p className="num mt-5 text-[0.75rem] leading-relaxed text-faint">
-            {PLACE.lines[1]}, {PLACE.lines[3]}
+            {PLACE.lines[0]}, {PLACE.lines[1]}
             <br />
             {PLACE.latLabel} {PLACE.lonLabel}
           </p>
