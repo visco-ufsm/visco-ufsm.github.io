@@ -322,75 +322,83 @@ export const FACULTY: Person[] = [
     name: "Adriano Q. de Oliveira",
     role: "Affiliated Faculty",
     area: "",
-    photo:
-      "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&h=400&fit=crop&auto=format",
+    photo: "",
     link: "#",
   },
   {
     name: "Leonardo R. Emmendorfer",
     role: "Affiliated Faculty",
     area: "",
-    photo:
-      "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&h=400&fit=crop&auto=format",
+    photo: "",
     link: "#",
   },
   {
     name: "Luiz J. S. Silva",
     role: "Affiliated Faculty",
     area: "",
-    photo:
-      "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&h=400&fit=crop&auto=format",
+    photo: "",
     link: "#",
   },
 ];
 
 export const STUDENTS: Person[] = [
   {
-    name: "Student A",
+    name: "Eduardo M. da Silveira",
+    role: "M.Sc.",
+    area: "Gaussian splatting",
+    photo: "",
+    link: "",
+  },
+  {
+    name: "Giovanni Gaiardo",
     role: "M.Sc.",
     area: "Neural compression",
-    photo:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&auto=format",
-    link: "https://github.com",
+    photo: "",
+    link: "",
   },
   {
-    name: "Student B",
+    name: "Henrique P. Gerhardt",
     role: "M.Sc.",
-    area: "Omnidirectional vision",
-    photo:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&auto=format",
-    link: "https://github.com",
+    area: "Optical flow",
+    photo: "",
+    link: "",
   },
   {
-    name: "Student C",
-    role: "Undergraduate",
-    area: "Image processing",
-    photo:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&auto=format",
-    link: "https://github.com",
+    name: "Artur C. Segat",
+    role: "UG Researcher",
+    area: "Neural compression",
+    photo: "",
+    link: "",
   },
   {
-    name: "Student D",
-    role: "Undergraduate",
-    area: "Visual data mining",
-    photo:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&auto=format",
-    link: "https://github.com",
+    name: "Diego R. Chaves",
+    role: "UG Researcher",
+    area: "Neural compression",
+    photo: "",
+    link: "",
   },
   {
-    name: "Student E",
-    role: "Undergraduate",
-    area: "360° scene analysis",
-    photo:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&auto=format",
-    link: "https://github.com",
+    name: "Gabriel S. Baggio",
+    role: "UG Researcher",
+    area: "Neural compression",
+    photo: "",
+    link: "",
+  },
+  {
+    name: "Luiza E. Silveira",
+    role: "UG Researcher",
+    area: "Neural compression",
+    photo: "",
+    link: "",
   },
 ];
 
 /* Registro de quem passou pelo grupo. */
 export const ALUMNI: { name: string; degree: string }[] = [
-  { name: "Former Student A", degree: "M.Sc. 2023" },
-  { name: "Former Student B", degree: "B.Sc. 2022" },
+  { name: "Bruno M. Bastos", degree: "B.Sc. 2025" },
+  { name: "Bruno Binkowski", degree: "M.Sc. 2025" },
+  { name: "Julia C. Remus", degree: "M.Sc. 2025" },
+  { name: "Manuel S. T. Veras", degree: "M.Sc. 2025" },
 ];
 
 /* ── Notícias (carrossel do "Who we are") ────────────────────────────────────
