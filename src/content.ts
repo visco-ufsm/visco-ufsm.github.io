@@ -4,7 +4,7 @@
  *
  * Este é o único arquivo que precisa ser alterado para atualizar o site:
  * textos, pessoas, publicações, projetos, notícias e localização.
- * Nenhum componente precisa ser tocado.
+ * Nenhum componente precisa ser tocado. :)
  *
  * Regras para não quebrar nada: 
  *   - Mantenha as aspas e as vírgulas exatamente como estão.
@@ -97,7 +97,7 @@ export const ABOUT = {
     "Activities emphasize fundamental and applied research, interdisciplinary collaboration, open science, and reproducible computational research.",
     "Founded in 2025, VisCo is based at the Technology Center (CT) of the Federal University of Santa Maria (UFSM), Brazil, bringing together faculty members, students, and collaborators from partner institutions."
   ],
-  newsTitle: "Recent",
+  newsTitle: "News",
 };
 
 /* ── Linhas de pesquisa ──────────────────────────────────────────────────────
