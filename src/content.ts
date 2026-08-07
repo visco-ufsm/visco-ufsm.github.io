@@ -108,7 +108,7 @@ export type LineId = "sr" | "sip" | "vu" | "ci" | "gvc";
 
 export const RESEARCH = {
   title: "Research",
-  intro: "Advancing the science and engineering of visual information.",
+  intro: "",
   activeLabel: "Projects (Active)",
   concludedLabel: "Projects (Concluded)",
 };
@@ -303,21 +303,45 @@ export type Person = {
 };
 
 export const PEOPLE_TEXT = {
-  title: "Meet the team",
-  intro: "Names link to each person's Lattes or GitHub profile.",
+  title: "People",
+  intro: "",
   facultyLabel: "Faculty",
-  studentsLabel: "Current students",
+  studentsLabel: "Students",
   alumniLabel: "Alumni",
 };
 
 export const FACULTY: Person[] = [
   {
     name: "Thiago L. T. da Silveira",
-    role: "Principal investigator",
-    area: "360° video · computer vision",
+    role: "Lead Faculty",
+    area: "signal/image processing · computer vision",
     photo:
       "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&h=400&fit=crop&auto=format",
-    link: "https://lattes.cnpq.br",
+    link: "https://tltsilveira.github.io/",
+  },
+  {
+    name: "Adriano Q. de Oliveira",
+    role: "Affiliated Faculty",
+    area: "",
+    photo:
+      "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&h=400&fit=crop&auto=format",
+    link: "#",
+  },
+  {
+    name: "Leonardo R. Emmendorfer",
+    role: "Affiliated Faculty",
+    area: "",
+    photo:
+      "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&h=400&fit=crop&auto=format",
+    link: "#",
+  },
+  {
+    name: "Luiz J. S. Silva",
+    role: "Affiliated Faculty",
+    area: "",
+    photo:
+      "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&h=400&fit=crop&auto=format",
+    link: "#",
   },
 ];
 
