@@ -424,7 +424,7 @@ export const STUDENTS: Person[] = [
     name: "Giovanni Gaiardo",
     role: "M.Sc. Student",
     area: "Neural compression",
-    photo: "",
+    photo: "/photos/ggaiardo.jpg",
     link: "",
   },
   {
