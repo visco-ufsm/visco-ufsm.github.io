@@ -514,7 +514,7 @@ export type NewsItem = {
 };
 
 export const NEWS: NewsItem[] = [
-  {
+  /*{
     date: "Jun 2025",
     tag: "Publication",
     text: "Neural compression of 360° video accepted at IEEE Transactions on Image Processing.",
@@ -548,12 +548,12 @@ export const NEWS: NewsItem[] = [
     text: "M.Sc. scholarship open in neural video coding, funded by CAPES/CNPq.",
     img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=500&fit=crop&auto=format",
     href: "#join",
-  },
+  },*/
   {
-    date: "Dec 2024",
+    date: "Aug 2026",
     tag: "Publication",
-    text: "Spherical convolutions for scene understanding presented at SIBGRAPI 2024.",
-    img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=500&fit=crop&auto=format",
+    text: "Some paper has been accepted for publication in ...",
+    img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=500&fit=crop&auto=format",
     href: "#publications",
   },
 ];
