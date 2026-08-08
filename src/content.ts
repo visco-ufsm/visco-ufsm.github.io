@@ -216,7 +216,7 @@ export const PUBS: Pub[] = [
     authors: "Bastos, B. M., Segala, E. B., and Silveira, T. L. T.",
     venue: "IEEE Latin American Symposium on Circuits and Systems (LASCAS)",
     type: "Conference",
-    lines: ["sr"],
+    lines: ["sr", "gvc"],
     pdf: null,
     doi: "https://doi.org/10.1109/LASCAS64004.2025.10966281",
     code: null,
