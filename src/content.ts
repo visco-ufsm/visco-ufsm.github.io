@@ -396,8 +396,8 @@ export const STUDENTS: Person[] = [
     name: "Eduardo M. da Silveira",
     role: "M.Sc. Student",
     area: "Gaussian splatting",
-    photo: "",
-    link: "",
+    photo: "/photos/emsilveira.jpeg",
+    link: "https://github.com/eduardomsilveira",
   },
   {
     name: "Enzo B. Segala",
@@ -466,7 +466,7 @@ export const STUDENTS: Person[] = [
     name: "Maria C. B. Silva",
     role: "Thesis Student",
     area: "Signal processing",
-    photo: "",
+    photo: "/photos/mcsilva.png",
     link: "",
   },
   {
