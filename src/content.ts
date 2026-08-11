@@ -344,7 +344,7 @@ export const FACULTY: Person[] = [
     name: "Leonardo R. Emmendorfer",
     role: "Affiliated Faculty",
     area: "",
-    photo: "/photos/lremmendorfer.jpeg",
+    photo: "/photos/lremmendorfer.png",
     link: "#",
   },
   {
