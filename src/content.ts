@@ -344,7 +344,7 @@ export const FACULTY: Person[] = [
     name: "Leonardo R. Emmendorfer",
     role: "Affiliated Faculty",
     area: "",
-    photo: "",
+    photo: "/photos/lremmendorfer.jpeg",
     link: "#",
   },
   {
@@ -382,8 +382,8 @@ export const STUDENTS: Person[] = [
     name: "Deomar S. S. Junior",
     role: "Grad. Researcher",
     area: "Neural compression",
-    photo: "",
-    link: "",
+    photo: "/photos/dssjunior.jpg",
+    link: "https://www.linkedin.com/in/deomar/",
   },
   {
     name: "Diego R. Chaves",
