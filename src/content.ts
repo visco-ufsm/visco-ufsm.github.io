@@ -329,14 +329,14 @@ export const FACULTY: Person[] = [
   {
     name: "Thiago L. T. da Silveira",
     role: "Lead Faculty",
-    area: "signal/image processing · pattern recognition · computer vision",
+    area: "Signal/image processing · Pattern recognition · Computer vision",
     photo: "/photos/tltsilveira.jpg",
     link: "https://tltsilveira.github.io/",
   },
   {
     name: "Adriano Q. de Oliveira",
     role: "Affiliated Faculty",
-    area: "applied AI · image processing · computer vision",
+    area: "Applied AI · Image processing · Computer vision",
     photo: "/photos/aqoliveira.png",
     link: "https://adrianoquiliao.github.io/",
   },
