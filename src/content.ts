@@ -411,7 +411,7 @@ export const STUDENTS: Person[] = [
     role: "UG Researcher",
     area: "Object detection",
     photo: "/photos/fandrade.jpg",
-    link: "www.linkedin.com/in/felipe-antonio-de-andrade-3b4433428",
+    link: "https://www.linkedin.com/in/felipe-antonio-de-andrade-3b4433428",
   },
   {
     name: "Gabriel S. Baggio",
