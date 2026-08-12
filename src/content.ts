@@ -403,8 +403,8 @@ export const STUDENTS: Person[] = [
     name: "Enzo B. Segala",
     role: "UG Researcher",
     area: "Transform coding",
-    photo: "",
-    link: "",
+    photo: "/photos/ebsegala.jpg",
+    link: "https://lattes.cnpq.br/5030432474101116",
   },
   {
     name: "Felipe A. Andrade",
