@@ -345,7 +345,7 @@ export const FACULTY: Person[] = [
     role: "Affiliated Faculty",
     area: "",
     photo: "/photos/lremmendorfer.png",
-    link: "#",
+    link: "http://lattes.cnpq.br/1129100746134234",
   },
   {
     name: "Luiz J. S. Silva",
