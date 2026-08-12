@@ -6,7 +6,7 @@
  * textos, pessoas, publicações, projetos, notícias e localização. 
  * Nenhum componente precisa ser tocado.  :)
  *
- * Regras para não quebrar nada: 
+ * Regras para não quebrar nada:  f
  *   - Mantenha as aspas e as vírgulas exatamente como estão.
  *   - Aspas dentro de um texto precisam de barra invertida: "o \"cubo\"".
  *   - Campos marcados como `null` significam "não existe"; para preencher,
@@ -375,8 +375,8 @@ export const STUDENTS: Person[] = [
     name: "Artur C. Segat",
     role: "UG Researcher",
     area: "Neural compression",
-    photo: "",
-    link: "",
+    photo: "/photos/acsegat.jpeg",
+    link: "https://www.linkedin.com/in/arturcsegat/",
   },
   {
     name: "Deomar S. S. Junior",
@@ -410,8 +410,8 @@ export const STUDENTS: Person[] = [
     name: "Felipe A. Andrade",
     role: "UG Researcher",
     area: "Object detection",
-    photo: "",
-    link: "",
+    photo: "/photos/fandrade.jpg",
+    link: "www.linkedin.com/in/felipe-antonio-de-andrade-3b4433428",
   },
   {
     name: "Gabriel S. Baggio",
