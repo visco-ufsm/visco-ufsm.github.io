@@ -336,9 +336,9 @@ export const FACULTY: Person[] = [
   {
     name: "Adriano Q. de Oliveira",
     role: "Affiliated Faculty",
-    area: "",
-    photo: "",
-    link: "#",
+    area: "applied AI · image processing · computer vision",
+    photo: "/photos/aqoliveira.png",
+    link: "https://adrianoquiliao.github.io/",
   },
   {
     name: "Leonardo R. Emmendorfer",
