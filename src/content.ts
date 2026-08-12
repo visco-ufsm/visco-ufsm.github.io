@@ -387,7 +387,7 @@ export const STUDENTS: Person[] = [
   },
   {
     name: "Diego R. Chaves",
-    role: "UG Res. | Thesis Student",
+    role: "UG Research | Thesis Student",
     area: "Neural compression",
     photo: "/photos/drchaves.jpg",
     link: "https://github.com/drchaves",
@@ -415,7 +415,7 @@ export const STUDENTS: Person[] = [
   },
   {
     name: "Gabriel S. Baggio",
-    role: "UG Res. | Thesis Student",
+    role: "UG Research | Thesis Student",
     area: "Neural compression",
     photo: "/photos/gsbaggio.png",
     link: "https://github.com/gsbaggio",
