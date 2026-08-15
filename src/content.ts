@@ -431,7 +431,7 @@ export const STUDENTS: Person[] = [
     name: "Henrique P. Gerhardt",
     role: "MSc Student",
     area: "Optical flow",
-    photo: "",
+    photo: "/photos/hpgerhardt.jpeg",
     link: "",
   },
   {
@@ -452,7 +452,7 @@ export const STUDENTS: Person[] = [
     name: "Luis G. W. Tozevich",
     role: "UG Researcher",
     area: "Object detection",
-    photo: "",
+    photo: "/photos/lgwtozevich.png",
     link: "",
   },
   {
