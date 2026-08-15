@@ -473,7 +473,7 @@ export const STUDENTS: Person[] = [
     name: "Maria R. Piekas",
     role: "UG Researcher",
     area: "Signal processing",
-    photo: "",
+    photo: "/photos/mrpiekas.png",
     link: "",
   },
   {
