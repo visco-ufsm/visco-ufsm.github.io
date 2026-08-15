@@ -553,7 +553,7 @@ export const NEWS: NewsItem[] = [
     date: "Aug 2026",
     tag: "Publication",
     text: "VisCo has a paper just accepted for publication in IEEE Access!",
-    img: "/news/F35C8461-7CFD-43F4-AE30-1DA24EF63A46.png?",
+    img: "/news/F35C8461-7CFD-43F4-AE30-1DA24EF63A46.png?w=800&h=500&fit=crop&auto=format",
     href: "#publications",
   },
 ];
