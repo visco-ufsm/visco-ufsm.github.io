@@ -6,7 +6,7 @@
  * textos, pessoas, publicações, projetos, notícias e localização. 
  * Nenhum componente precisa ser tocado.  :)
  *
- * Regras para não quebrar nada:  f
+ * Regras para não quebrar nada:  
  *   - Mantenha as aspas e as vírgulas exatamente como estão.
  *   - Aspas dentro de um texto precisam de barra invertida: "o \"cubo\"".
  *   - Campos marcados como `null` significam "não existe"; para preencher,
@@ -261,7 +261,7 @@ export const PUBS: Pub[] = [
     venue: "Simpósio Brasileiro de Computação Aplicada à Saúde",
     type: "Conference",
     lines: ["sip"],
-    pdf: null,
+    pdf: "https://sol.sbc.org.br/index.php/sbcas/article/view/35539/35326",
     doi: "https://doi.org/10.5753/sbcas.2025.7731",
     code: null,
   },
@@ -370,7 +370,7 @@ export const FACULTY: Person[] = [
     link: "http://lattes.cnpq.br/1129100746134234",
   },
   {
-    name: "Luiz J. S. Silva",
+    name: "Luiz Schirmer",
     role: "Affiliated Faculty",
     area: "",
     photo: "",
