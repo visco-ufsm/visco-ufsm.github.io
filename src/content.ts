@@ -211,6 +211,28 @@ export const OLDER_AFTER = 5;
 
 export const PUBS: Pub[] = [
   {
+    year: 2026,
+    title: "HiFiC360: High-Fidelity Compression for 360° Images",
+    authors: "Baggio, G. S., Chaves, D. R., and Silveira, T. L. T.",
+    venue: "SBC/SBMicro/IEEE Symposium on Integrated Circuits and Systems Design (SBCCI) - Accepted",
+    type: "Conference",
+    lines: ["sr", "gvc"],
+    pdf: null,
+    doi: null,
+    code: null,
+  },
+  {
+    year: 2026,
+    title: "Geometry-Aware Transform Pruning for Omnidirectional Image Compression",
+    authors: "Silveira, T. L. T., Segala, E. B., Bayer, F. M., and Cintra, R. J.",
+    venue: "IEEE Access - Accepted",
+    type: "Journal",
+    lines: ["gvc", "sr"],
+    pdf: null,
+    doi: null,
+    code: null,
+  },
+  {
     year: 2025,
     title: "Low-Complexity Compression of 360° Still Images",
     authors: "Bastos, B. M., Segala, E. B., and Silveira, T. L. T.",
