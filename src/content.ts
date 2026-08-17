@@ -233,6 +233,17 @@ export const PUBS: Pub[] = [
     code: null,
   },
   {
+    year: 2026,
+    title: "[ACCEPTED] Zero-Shot Recognition of Utility Meter Readings Using Vision-Language Models and General-Purpose OCRs",
+    authors: "Tozevich, L. G. W., da Silva, L. P., Lunardi, G. M. L., Silveira, T. L. T., and Oliveira, A. Q.",
+    venue: "Encontro Nacional de Inteligência Artificial e Computacional (ENIAC)",
+    type: "Conference",
+    lines: ["vu"],
+    pdf: null,
+    doi: null,
+    code: null,
+  },
+  {
     year: 2025,
     title: "Low-Complexity Compression of 360° Still Images",
     authors: "Bastos, B. M., Segala, E. B., and Silveira, T. L. T.",
