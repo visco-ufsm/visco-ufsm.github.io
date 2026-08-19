@@ -34,7 +34,17 @@ function Entry({ p }: { p: Pub }) {
           <span className="sr-only">{p.type}: </span>
           {p.title}
         </h4>
-        <div className="mono flex shrink-0 gap-4">
+        <div className="mono flex shrink-0 items-center gap-4">
+          {/* Accepted papers have no DOI yet, so the stamp takes the slot the
+              links will occupy once the paper is out. */}
+          {p.accepted && (
+            <span
+              title="Accepted for publication. Links follow once it appears."
+              className="border border-iris px-2 py-1 leading-none text-iris"
+            >
+              Accepted
+            </span>
+          )}
           {links.map(([label, href]) =>
             href ? (
               <a
@@ -78,6 +88,8 @@ export default function Publications({
       if (type !== "All" && p.type !== (type as PubType)) return false;
       if (line && !p.lines.includes(line)) return false;
       if (!q) return true;
+      /* "accepted" used to sit in the title; keep it searchable as a stamp. */
+      if (p.accepted && "accepted".includes(q)) return true;
       return (
         p.title.toLowerCase().includes(q) ||
         p.venue.toLowerCase().includes(q) ||

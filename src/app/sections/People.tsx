@@ -1,7 +1,8 @@
 import { ALUMNI, FACULTY, PEOPLE_TEXT, STUDENTS, type Person } from "../data";
 import { Collapse, Reveal, SectionHead, Thumb } from "../components/primitives";
 
-const hasLink = (p: Person) => p.link !== "" && p.link !== "#";
+const linked = (url: string) => url !== "" && url !== "#";
+const hasLink = (p: Person) => linked(p.link);
 
 function Portrait({ p, size }: { p: Person; size: number }) {
   const Shell = hasLink(p) ? "a" : "span";
@@ -126,7 +127,19 @@ export default function People() {
               key={a.name}
               className="flex items-baseline justify-between gap-4 border-b border-rule py-3.5"
             >
-              <span className="text-[0.9375rem]">{a.name}</span>
+              {/* No photo in this list, so the name carries the link. */}
+              {linked(a.link) ? (
+                <a
+                  href={a.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ulink text-[0.9375rem]"
+                >
+                  {a.name}
+                </a>
+              ) : (
+                <span className="text-[0.9375rem]">{a.name}</span>
+              )}
               <span className="num text-[0.7rem] text-faint">{a.degree}</span>
             </li>
           ))}

@@ -181,6 +181,9 @@ export const PROJECTS: Project[] = [
  * `lines` aceita uma ou mais áreas: lines: ["sr"] ou lines: ["sr", "gvc"].
  * `collab: true` marca papers com colaboradores de fora do VisCo — mostra a
  *   etiqueta "Collaboration" na entrada. Omita o campo nos demais.
+ * `accepted: true` marca papers aceitos que ainda não saíram — mostra o selo
+ *   "Accepted" no lugar dos links. Apague o campo quando publicar e preencher
+ *   `doi`/`pdf`. Não escreva "[ACCEPTED]" no título.
  * `pdf`, `doi` e `code`: use null para esconder o link. */
 
 export type PubType = "Journal" | "Conference";
@@ -193,6 +196,7 @@ export type Pub = {
   type: PubType;
   lines: LineId[];
   collab?: boolean;
+  accepted?: boolean;
   pdf: string | null;
   doi: string | null;
   code: string | null;
@@ -212,33 +216,36 @@ export const OLDER_AFTER = 5;
 export const PUBS: Pub[] = [
   {
     year: 2026,
-    title: "[ACCEPTED] Geometry-Aware Transform Pruning for Omnidirectional Image Compression",
+    title: "Geometry-Aware Transform Pruning for Omnidirectional Image Compression",
     authors: "Silveira, T. L. T., Segala, E. B., Bayer, F. M., and Cintra, R. J.",
     venue: "IEEE Access",
     type: "Journal",
     lines: ["gvc", "sr"],
+    accepted: true,
     pdf: null,
     doi: null,
     code: null,
   },
   {
     year: 2026,
-    title: "[ACCEPTED] HiFiC360: High-Fidelity Compression for 360° Images",
+    title: "HiFiC360: High-Fidelity Compression for 360° Images",
     authors: "Baggio, G. S., Chaves, D. R., and Silveira, T. L. T.",
     venue: "SBC/SBMicro/IEEE Symposium on Integrated Circuits and Systems Design (SBCCI)",
     type: "Conference",
     lines: ["sr", "gvc"],
+    accepted: true,
     pdf: null,
     doi: null,
     code: null,
   },
   {
     year: 2026,
-    title: "[ACCEPTED] Zero-Shot Recognition of Utility Meter Readings Using Vision-Language Models and General-Purpose OCRs",
+    title: "Zero-Shot Recognition of Utility Meter Readings Using Vision-Language Models and General-Purpose OCRs",
     authors: "Tozevich, L. G. W., da Silva, L. P., Lunardi, G. M. L., Silveira, T. L. T., and Oliveira, A. Q.",
     venue: "Encontro Nacional de Inteligência Artificial e Computacional (ENIAC)",
     type: "Conference",
     lines: ["vu"],
+    accepted: true,
     pdf: null,
     doi: null,
     code: null,
@@ -518,12 +525,14 @@ export const STUDENTS: Person[] = [
   },
 ];
 
-/* Registro de quem passou pelo grupo. */
-export const ALUMNI: { name: string; degree: string }[] = [
-  { name: "Bruno Binkowski", degree: "M.Sc. 2025" },
-  { name: "Julia C. Remus", degree: "M.Sc. 2025" },
-  { name: "Manuel S. T. Veras", degree: "M.Sc. 2025" },
-  { name: "Bruno M. Bastos", degree: "B.Sc. 2025" },
+/* Registro de quem passou pelo grupo.
+ * `link`: página pessoal, Lattes, GitHub ou LinkedIn — o nome vira link.
+ * Use "" para deixar o nome sem link (esta lista não tem foto). */
+export const ALUMNI: { name: string; degree: string; link: string }[] = [
+  { name: "Bruno Binkowski", degree: "M.Sc. 2025", link: "https://github.com/" },
+  { name: "Julia C. Remus", degree: "M.Sc. 2025", link: "" },
+  { name: "Manuel S. T. Veras", degree: "M.Sc. 2025", link: "" },
+  { name: "Bruno M. Bastos", degree: "B.Sc. 2025", link: "" },
 ];
 
 /* ── Notícias (carrossel do "Who we are") ────────────────────────────────────
