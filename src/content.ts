@@ -383,7 +383,7 @@ export const FACULTY: Person[] = [
   {
     name: "Leonardo R. Emmendorfer",
     role: "Affiliated Faculty",
-    area: "",
+    area: "Signal/image Processing · Computer Vision · Pattern Recognition",
     photo: "/photos/lremmendorfer.png",
     link: "http://lattes.cnpq.br/1129100746134234",
   },
