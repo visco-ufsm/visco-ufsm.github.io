@@ -465,7 +465,7 @@ export const FACULTY: Person[] = [
     role: "Affiliated Faculty",
     area: "Computer Graphics · Computer Vision · Machine Learning",
     photo: "/photos/lschirmer.png",
-    link: "lschirmer.com",
+    link: "http://lschirmer.com",
   },
 ];
 
