@@ -355,7 +355,7 @@ export const PUBS: Pub[] = [
   {
     year: 2025,
     title: "Hyperspectral Image Rock Classification Based on Fourier Neural Operators Network",
-    authors: "Lorenz, J. C., Aires, A. S., Ritter, G. F., Marques Junior, A., Silva, L., Cagliari, J., Antunes, R., Ibanez, D., Silveira, M., Veronez, M., and da Silveira Junior, L. G.",
+    authors: "Lorenz, J. C., Aires, A. S., Ritter, G. F., Marques Junior, A., Schirmer, L., Cagliari, J., Antunes, R., Ibanez, D., Silveira, M., Veronez, M., and da Silveira Junior, L. G.",
     venue: "IEEE International Geoscience and Remote Sensing Symposium",
     type: "Conference",
     lines: ["ci", "vu", "sip"],
@@ -366,7 +366,7 @@ export const PUBS: Pub[] = [
   {
     year: 2026,
     title: "DocSafe: Toward Practical Print-Proof Image Steganography via Frequency Decomposition and Covariance Alignment",
-    authors: "Shadmand, F., Medvedev, I., Silva, L. J. S., and Gonçalves, N.",
+    authors: "Shadmand, F., Medvedev, I., Schirmer, L., and Gonçalves, N.",
     venue: "IEEE Access",
     type: "Journal",
     lines: ["sr", "sip"],
