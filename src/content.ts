@@ -584,7 +584,7 @@ export const STUDENTS: Person[] = [
  * `link`: página pessoal, Lattes, GitHub ou LinkedIn — o nome vira link.
  * Use "" para deixar o nome sem link (esta lista não tem foto). */
 export const ALUMNI: { name: string; degree: string; link: string }[] = [
-  { name: "Bruno Binkowski", degree: "M.Sc. 2025", link: "https://github.com/" },
+  { name: "Bruno Binkowski", degree: "M.Sc. 2025", link: "" },
   { name: "Julia C. Remus", degree: "M.Sc. 2025", link: "" },
   { name: "Manuel S. T. Veras", degree: "M.Sc. 2025", link: "" },
   { name: "Bruno M. Bastos", degree: "B.Sc. 2025", link: "" },
