@@ -369,7 +369,7 @@ export const FACULTY: Person[] = [
   {
     name: "Thiago L. T. da Silveira",
     role: "Lead Faculty",
-    area: "Signal/image processing · Pattern recognition · Computer vision",
+    area: "Signal/image processing · Machine Learning · Computer vision",
     photo: "/photos/tltsilveira.jpg",
     link: "https://tltsilveira.github.io/",
   },
@@ -383,16 +383,16 @@ export const FACULTY: Person[] = [
   {
     name: "Leonardo R. Emmendorfer",
     role: "Affiliated Faculty",
-    area: "Signal/image Processing · Computer Vision · Pattern Recognition",
+    area: "Signal/image Processing · Computer Vision · Machine Learning",
     photo: "/photos/lremmendorfer.png",
     link: "http://lattes.cnpq.br/1129100746134234",
   },
   {
     name: "Luiz Schirmer",
     role: "Affiliated Faculty",
-    area: "",
-    photo: "",
-    link: "#",
+    area: "Computer Graphics · Computer Vision · Machine Learning",
+    photo: "/photos/lschirmer.png",
+    link: "lschirmer.com",
   },
 ];
 
