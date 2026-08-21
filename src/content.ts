@@ -114,7 +114,7 @@ export type LineId = "sr" | "sip" | "vu" | "ci" | "gvc";
 export const RESEARCH = {
   title: "Research",
   intro: "",
-  activeLabel: "Projects (Active)",
+  activeLabel: "Projects",
   concludedLabel: "Projects (Concluded)",
 };
 
