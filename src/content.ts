@@ -247,7 +247,7 @@ export const PUBS: Pub[] = [
   {
     year: 2026,
     title: "Zero-Shot Recognition of Utility Meter Readings Using Vision-Language Models and General-Purpose OCRs",
-    authors: "Tozevich, L. G. W., da Silva, L. P., Lunardi, G. M. L., Silveira, T. L. T., and Oliveira, A. Q.",
+    authors: "Tozevich, L. G. W., da Silva, L. P., Lunardi, G. M., Silveira, T. L. T., and Oliveira, A. Q.",
     venue: "Encontro Nacional de Inteligência Artificial e Computacional",
     type: "Conference",
     lines: ["vu"],
