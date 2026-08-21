@@ -165,7 +165,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Low-Complexity Methods for End-to-End Neural Compression of 360° Images and Videos",
     year: "2024–27",
-    desc: "This project advances the state of the art in low-complexity neural compression of 360° images and videos through efficient deep learning architectures, spherical data representations, and model optimization techniques.",
+    desc: "Application of efficient deep learning architectures and spherical data representations to end-to-end neural compression of 360° images and videos, reducing computational complexity while preserving compression efficiency. The project combines model optimization, data augmentation, and geometry-aware techniques to develop low-complexity neural codecs.",
     lines: ["gvc", "ci"],
     tags: ["T. L. T. Silveira", "FAPERGS PqG"],
     active: true,
@@ -179,7 +179,8 @@ export const PROJECTS: Project[] = [
     tags: ["L. Schirmer", "FAPERGS PqG"],
     active: true,
     code: null,
-  },  {
+  }, 
+  {
     title: "Machine Learning Proxies for Numerical Reservoir Flow Simulators",
     year: "2025–28",
     desc: "Development of neural network–based proxies, including PINNs and E2CO, for three-phase 3D reservoir flow simulation, reducing computational cost compared to conventional simulators. The project also integrates production optimization and validates the learned proxies against traditional numerical simulators in cooperation with CENPES/Petrobras.",
