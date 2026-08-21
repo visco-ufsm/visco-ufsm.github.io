@@ -165,7 +165,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Low-Complexity Methods for End-to-End Neural Compression of 360° Images and Videos",
     year: "2024–27",
-    desc: "Application of efficient deep learning architectures and spherical data representations to end-to-end neural compression of 360° images and videos, reducing computational complexity while preserving compression efficiency. The project combines model optimization, data augmentation, and geometry-aware techniques to develop low-complexity neural codecs.",
+    desc: "Development of low-complexity neural compression methods for 360° media using efficient deep learning architectures and spherical data representations. The project explores data augmentation, geometry-aware processing, and model optimization to reduce computational complexity while maintaining high compression efficiency and visual quality.",
     lines: ["gvc", "ci"],
     tags: ["T. L. T. Silveira", "FAPERGS PqG"],
     active: true,
