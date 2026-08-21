@@ -473,15 +473,15 @@ export const STUDENTS: Person[] = [
     name: "Alejandro V. T. Brites",
     role: "Thesis Student",
     area: "Volume segmentation",
-    photo: "",
+    photo: "/photos/avtbrites.jpeg",
     link: "",
   },
   {
     name: "Alice Z. Marques",
     role: "Thesis Student",
     area: "Signal processing",
-    photo: "",
-    link: "",
+    photo: "/photos/azmarques.jpg",
+    link: "https://lattes.cnpq.br/8175015225864817",
   },
   {
     name: "Artur C. Segat",
