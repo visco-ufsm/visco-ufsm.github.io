@@ -239,9 +239,8 @@ export const PUBS: Pub[] = [
     venue: "IEEE Access",
     type: "Journal",
     lines: ["gvc", "sr"],
-    accepted: true,
     pdf: null,
-    doi: null,
+    doi: "https://doi.org/10.1109/ACCESS.2026.3726449",
     code: null,
   },
   {
