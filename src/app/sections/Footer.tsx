@@ -40,7 +40,15 @@ export default function Footer({ go }: { go: (s: Section) => void }) {
               rel="noopener noreferrer"
               className="ulink text-mute"
             >
-              ufsm.br
+              UFSM
+            </a>
+            <a
+              href="http://dgp.cnpq.br/dgp/espelhogrupo/816458"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ulink text-mute"
+            >
+              CNPq
             </a>
           </div>
         </div>
