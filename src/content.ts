@@ -665,6 +665,13 @@ export const NEWS: NewsItem[] = [
   },*/
   {
     date: "Aug 2026",
+    tag: "Event",
+    text: "VisCo has presented a paper at SBCCI 2026!",
+    img: "/news/Paper Prensented at SBCCI - 1.png",
+    href: "publications",
+  },
+  {
+    date: "Aug 2026",
     tag: "Publication",
     text: "VisCo just had a paper accepted for publication in IEEE Access!",
     img: "/news/1B35E422-847C-4265-93D6-0628FE58614B.png?w=800&h=500&fit=crop&auto=format",
