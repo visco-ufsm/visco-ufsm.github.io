@@ -50,6 +50,8 @@ function Entry({ p }: { p: Pub }) {
               <a
                 key={label}
                 href={href}
+                target="_blank" 
+                rel="noopener noreferrer"
                 className={`ulink ${label === "Code" ? "text-jade" : "text-ink"}`}
               >
                 {label}
