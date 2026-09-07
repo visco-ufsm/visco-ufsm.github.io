@@ -38,12 +38,12 @@ export default function NewsCarousel() {
           className="absolute inset-0 h-full w-full object-cover"
         />
       </div> */}
-      <div className="relative flex-1 overflow-hidden border border-rule bg-white">
-        <Thumb
-          src={item.img}
-          className="w-full h-auto object-contain"
-        />
-      </div>
+      <div className="relative overflow-hidden border border-rule bg-white aspect-video">
+  <Thumb
+    src={item.img}
+    className="absolute inset-0 h-full w-full object-cover"
+  />
+</div>
       <div className="mt-4 flex items-center gap-3">
         <span className="num text-[0.7rem] text-faint">{item.date}</span>
         <Tag type={item.tag} />
