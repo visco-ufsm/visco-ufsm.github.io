@@ -677,7 +677,7 @@ export const NEWS: NewsItem[] = [
   },*/
   {
     date: "Sep 2026",
-    tag: "Event",
+    tag: "Publication",
     text: "VisCo just had a paper accepted for presentation at SEPOC!",
     img: "/news/f59c8b32-6a14-41d3-9ee8-124b5d63f9da.png",
     href: "publications",
