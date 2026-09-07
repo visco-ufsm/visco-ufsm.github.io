@@ -32,10 +32,16 @@ export default function NewsCarousel() {
     <>
       {/* The image is the flexible part: it grows or shrinks so the card's
           bottom edge stays level with the text column beside the carousel. */}
-      <div className="relative min-h-[11rem] flex-1 overflow-hidden border border-rule bg-white">
+      /* <div className="relative min-h-[11rem] flex-1 overflow-hidden border border-rule bg-white">
         <Thumb
           src={item.img}
           className="absolute inset-0 h-full w-full object-cover"
+        />
+      </div> */
+      <div className="relative flex-1 overflow-hidden border border-rule bg-white">
+        <Thumb
+          src={item.img}
+          className="w-full h-auto object-contain"
         />
       </div>
       <div className="mt-4 flex items-center gap-3">
