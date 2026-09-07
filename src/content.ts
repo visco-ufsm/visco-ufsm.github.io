@@ -234,6 +234,18 @@ export const OLDER_AFTER = 5;
 export const PUBS: Pub[] = [
   {
     year: 2026,
+    title: "Benchmarking Anomaly Detection Filters for Photovoltaic SCADA Data",
+    authors: "Silva, M. C. B., Pozzobon, E., and Silveira, T. L. T.",
+    venue: "Seminar on Power Electronics and Control",
+    type: "Conference",
+    lines: ["ci"],
+    accepted: true,
+    pdf: null,
+    doi: null,
+    code: null,
+  },
+  {
+    year: 2026,
     title: "Geometry-Aware Transform Pruning for Omnidirectional Image Compression",
     authors: "Silveira, T. L. T., Segala, E. B., Bayer, F. M., and Cintra, R. J.",
     venue: "IEEE Access",
@@ -664,10 +676,17 @@ export const NEWS: NewsItem[] = [
     href: "#join",
   },*/
   {
+    date: "Sep 2026",
+    tag: "Event",
+    text: "VisCo just had a paper accepted for presentation at SEPOC!",
+    img: "/news/f59c8b32-6a14-41d3-9ee8-124b5d63f9da.png",
+    href: "publications",
+  },
+  {
     date: "Aug 2026",
     tag: "Event",
     text: "VisCo has presented a paper at SBCCI 2026!",
-    img: "/news/Paper Prensented at SBCCI - 1.png",
+    img: "/news/d87a7caf-0f90-4ceb-b79a-88987780f8bc.png",
     href: "publications",
   },
   {
