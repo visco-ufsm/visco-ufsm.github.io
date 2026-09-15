@@ -234,6 +234,18 @@ export const OLDER_AFTER = 5;
 export const PUBS: Pub[] = [
   {
     year: 2026,
+    title: "Zonal Overfitted Coding for 360° Images",
+    authors: "Chaves, D. R., Baggio, G. S., Gaiardo, G., and Silveira, T. L. T.",
+    venue: "IEEE International Conference on Visual Communications and Image Processing",
+    type: "Conference",
+    lines: ["sr", "gvc"],
+    accepted: true,
+    pdf: null,
+    doi: null,
+    code: null,
+  },
+  {
+    year: 2026,
     title: "Benchmarking Anomaly Detection Filters for Photovoltaic SCADA Data",
     authors: "Silva, M. C. B., Pozzobon, E., and Silveira, T. L. T.",
     venue: "Seminar on Power Electronics and Control",
