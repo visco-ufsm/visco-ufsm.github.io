@@ -232,6 +232,42 @@ export const PUBLICATIONS_TEXT = {
 export const OLDER_AFTER = 5;
 
 export const PUBS: Pub[] = [
+    {
+    year: 2026,
+    title: "Aceleração da Detecção de Objetos em ESP32-S3 por Seleção Híbrida de Kernels: Estudo de Caso na Separação de Componentes de Smartphones Pirolisados",
+    authors: "Andrade, F. A. and Silveira, T. L. T.",
+    venue: "Escola Regional de Aprendizado de Máquina e Inteligência Artificial da Região Sul (ERAMIA-RS)",
+    type: "Conference",
+    lines: ["ci"],
+    accepted: true,
+    pdf: null,
+    doi: null,
+    code: null,
+  },
+  {
+    year: 2026,
+    title: "Adaptação de Modelo de Atenção Linear para Compressão Neural Fim-a-Fim de Imagens em 360°",
+    authors: "Garcia, Y. F., Silveira, L. E., and Silveira, T. L. T.",
+    venue: "Escola Regional de Aprendizado de Máquina e Inteligência Artificial da Região Sul (ERAMIA-RS)",
+    type: "Conference",
+    lines: ["sr", "gvc"],
+    accepted: true,
+    pdf: null,
+    doi: null,
+    code: null,
+  },
+  {
+    year: 2026,
+    title: "Comparative Evaluation of CNN and Vision Transformer Architectures for Low-Complexity Neural Image Compression",
+    authors: "Silveira, L. E., Garcia, Y. F., and Silveira, T. L. T.",
+    venue: "Escola Regional de Aprendizado de Máquina e Inteligência Artificial da Região Sul (ERAMIA-RS)",
+    type: "Conference",
+    lines: ["sr", "gvc"],
+    accepted: true,
+    pdf: null,
+    doi: null,
+    code: null,
+  },
   {
     year: 2026,
     title: "Zonal Overfitted Coding for 360° Images",
