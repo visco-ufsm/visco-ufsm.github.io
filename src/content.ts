@@ -724,6 +724,13 @@ export const NEWS: NewsItem[] = [
     href: "#join",
   },*/
   {
+    date: "Oct 2026",
+    tag: "Publication",
+    text: "VisCo just had three short papers accepted for presentation at ERAMIA-RS!",
+    img: "/news/7a8c3e21-4b5d-4f9e-bc82-936d5a12f47b.jpeg",
+    href: "publications",
+  },
+  {
     date: "Sep 2026",
     tag: "Publication",
     text: "VisCo just had a paper accepted for presentation at VCIP!",
