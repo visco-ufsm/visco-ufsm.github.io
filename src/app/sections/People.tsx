@@ -22,7 +22,7 @@ function Portrait({ p, size }: { p: Person; size: number }) {
       >
         <Thumb
           src={p.photo}
-          className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
+          className="h-full w-full object-cover transition-all duration-500 group-hover:grayscale-0"
         />
       </span>
     </Shell>
