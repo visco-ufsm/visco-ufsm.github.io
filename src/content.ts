@@ -288,7 +288,6 @@ export const PUBS: Pub[] = [
     venue: "IEEE International Conference on Visual Communications and Image Processing",
     type: "Conference",
     lines: ["sr", "gvc"],
-    accepted: true,
     pdf: null,
     doi: null,
     code: null,
