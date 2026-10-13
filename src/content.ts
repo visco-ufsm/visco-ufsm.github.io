@@ -350,7 +350,7 @@ export const PUBS: Pub[] = [
     lines: ["sr", "gvc"],
     accepted: true,
     pdf: null,
-    doi: null,
+    doi: "https://doi.org/10.1109/SBCCI69725.2026.11706803",
     code: null,
   },
   {
