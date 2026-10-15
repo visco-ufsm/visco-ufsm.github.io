@@ -745,14 +745,14 @@ export const NEWS: NewsItem[] = [
     text: "Our 360° benchmark dataset is now open access on GitHub.",
     img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop&auto=format",
     href: GROUP.github,
-  },
-  {
-    date: "Feb 2025",
-    tag: "Opportunity",
-    text: "M.Sc. scholarship open in neural video coding, funded by CAPES/CNPq.",
-    img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=500&fit=crop&auto=format",
-    href: "#join",
   },*/
+  {
+    date: "Oct 2026",
+    tag: "Opportunity",
+    text: "VisCo advisors are recruiting new master's students for the 2027/1 intake at PPGCC/UFSM!",
+    img: "/news/403FF26D-424F-4062-AB83-EEC33E3F4666.png",
+    href: "https://www.ufsm.br/cursos/pos-graduacao/santa-maria/ppgcc/2026/09/24/processo-seletivo-para-pos-graduacao-com-ingresso-no-1o-semestre-de-2026-2",
+  },
   {
     date: "Oct 2026",
     tag: "Publication",
