@@ -47,9 +47,6 @@ export default function Footer({ go }: { go: (s: Section) => void }) {
             >
               GitHub
             </a>
-            <a href={`mailto:${GROUP.email}`} className="ulink text-mute">
-              Email
-            </a>
             <a
               href="https://www.instagram.com/visco.ufsm/"
               target="_blank"
@@ -57,6 +54,9 @@ export default function Footer({ go }: { go: (s: Section) => void }) {
               className="ulink text-mute"
             >
               Instagram
+            </a>
+            <a href={`mailto:${GROUP.email}`} className="ulink text-mute">
+              Email
             </a>
           </div>
         </div>
