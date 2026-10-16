@@ -347,7 +347,6 @@ export const PUBS: Pub[] = [
     venue: "SBC/SBMicro/IEEE Symposium on Integrated Circuits and Systems Design",
     type: "Conference",
     lines: ["sr", "gvc"],
-    accepted: true,
     pdf: null,
     doi: "https://doi.org/10.1109/SBCCI69725.2026.11706803",
     code: null,
