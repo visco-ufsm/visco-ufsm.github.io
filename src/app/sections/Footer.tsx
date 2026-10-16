@@ -50,6 +50,14 @@ export default function Footer({ go }: { go: (s: Section) => void }) {
             >
               CNPq
             </a>
+            <a
+              href="https://www.instagram.com/visco.ufsm/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ulink text-mute"
+            >
+              Instagram
+            </a>
           </div>
         </div>
 
