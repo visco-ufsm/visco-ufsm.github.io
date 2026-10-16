@@ -23,17 +23,6 @@ export default function Footer({ go }: { go: (s: Section) => void }) {
             {PLACE.latLabel} {PLACE.lonLabel}
           </p>
           <div className="mono mt-5 flex flex-wrap gap-x-6 gap-y-2">
-            <a href={`mailto:${GROUP.email}`} className="ulink text-mute">
-              Email
-            </a>
-            <a
-              href={GROUP.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ulink text-mute"
-            >
-              GitHub
-            </a>
             <a
               href="https://www.ufsm.br"
               target="_blank"
@@ -49,6 +38,17 @@ export default function Footer({ go }: { go: (s: Section) => void }) {
               className="ulink text-mute"
             >
               CNPq
+            </a>
+            <a
+              href={GROUP.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ulink text-mute"
+            >
+              GitHub
+            </a>
+            <a href={`mailto:${GROUP.email}`} className="ulink text-mute">
+              Email
             </a>
             <a
               href="https://www.instagram.com/visco.ufsm/"
