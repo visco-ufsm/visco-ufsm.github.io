@@ -761,7 +761,7 @@ export const NEWS: NewsItem[] = [
    {
     date: "Nov 2026",
     tag: "Publication",
-    text: "VisCo just had a papers accepted for presentation at IEEE LASCAS 2027!",
+    text: "VisCo just had a paper accepted for presentation at IEEE LASCAS 2027!",
     img: "/news/47B71ECE-9428-46E2-978C-7F96EC8D05E0.png",
     href: "publications",
   },
