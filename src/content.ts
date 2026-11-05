@@ -232,7 +232,19 @@ export const PUBLICATIONS_TEXT = {
 export const OLDER_AFTER = 5;
 
 export const PUBS: Pub[] = [
-    {
+   {
+    year: 2027,
+    title: "Neural 360° Image Compression: State-of-the-Art Benchmark and Perspectives",
+    authors: "Gaiardo, G. and Silveira, T. L. T.",
+    venue: "IEEE Latin American Symposium on Circuits and Systems",
+    type: "Conference",
+    lines: ["sr", "gvc"],
+    accepted: true,
+    pdf: null,
+    doi: null,
+    code: null,
+  },
+  {
     year: 2026,
     title: "Aceleração da Detecção de Objetos em ESP32-S3 por Seleção Híbrida de Kernels: Estudo de Caso na Separação de Componentes de Smartphones Pirolisados",
     authors: "Andrade, F. A. and Silveira, T. L. T.",
@@ -746,7 +758,14 @@ export const NEWS: NewsItem[] = [
     img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop&auto=format",
     href: GROUP.github,
   },*/
-  {
+   {
+    date: "Nov 2026",
+    tag: "Publication",
+    text: "VisCo just had a papers accepted for presentation at IEEE LASCAS 2027!",
+    img: "/news/47B71ECE-9428-46E2-978C-7F96EC8D05E0.png",
+    href: "publications",
+  },
+    {
     date: "Oct 2026",
     tag: "Opportunity",
     text: "VisCo advisors are recruiting new master's students for the 2027/1 intake at PPGCC/UFSM!",
